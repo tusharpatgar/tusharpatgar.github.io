@@ -133,27 +133,6 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 relative space-y-4"
           >
-            {/* Luffy Theme Header Card */}
-            <div className="flex items-center gap-3.5 p-3.5 rounded-2xl bg-gradient-to-r from-amber-500/10 via-slate-900/90 to-sky-500/10 border border-amber-500/30 backdrop-blur-xl shadow-lg">
-              <div className="relative w-14 h-14 rounded-xl overflow-hidden border-2 border-amber-400/60 shadow-md flex-shrink-0 bg-slate-900">
-                <img
-                  src="https://static.wikia.nocookie.net/onepiece/images/d/d8/Monkey_D._Luffy_Anime_Post_Timeskip_Infobox.png"
-                  alt="Monkey D. Luffy"
-                  className="w-full h-full object-cover object-top transform hover:scale-110 transition-transform duration-300"
-                  onError={(e) => {
-                    (e.target as HTMLElement).style.display = 'none';
-                  }}
-                />
-              </div>
-              <div className="flex-1 min-w-0">
-                <div className="flex items-center gap-2">
-                  <span className="text-xs font-bold text-amber-300 uppercase tracking-wider">Captain Luffy Vibe</span>
-                  <span className="px-2 py-0.5 rounded-full text-[10px] font-semibold bg-amber-400/20 text-amber-300 border border-amber-400/30">Haki-Powered ETL</span>
-                </div>
-                <p className="text-xs text-slate-300 truncate mt-0.5">"Set sail for robust data pipelines & Medallion architecture!" 🏴‍☠️</p>
-              </div>
-            </div>
-
             {/* Terminal Window Mockup */}
             <div className="relative rounded-2xl bg-slate-950/90 border border-slate-800 shadow-2xl shadow-sky-950/50 overflow-hidden backdrop-blur-xl">
               {/* Window Header */}
