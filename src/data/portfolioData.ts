@@ -362,7 +362,7 @@ export const EDUCATION = {
   degree: "Bachelor of Computer Applications (BCA)",
   period: "2020 – 2023",
   field: "Computer Science & Information Technology",
-  institution: "Bengaluru, India",
+  institution: "Dharwad,Karnataka",
   highlights: [
     "Core curriculum in Data Structures, Database Management Systems (RDBMS), Operating Systems, and Object-Oriented Programming.",
     "Built hands-on foundations in relational schema design, SQL querying, and algorithmic problem solving.",
