@@ -13,7 +13,12 @@
       "Bash(curl -s -I \"https://github-profile-trophy.vercel.app/?username=tusharpatgar\")",
       "Bash(curl -s -I \"https://github-readme-activity-graph.vercel.app/graph?username=tusharpatgar\")",
       "Bash(curl -s -I \"https://img.shields.io/github/followers/tusharpatgar?label=Followers&style=for-the-badge&logo=github&color=2563EB\")",
-      "Bash(curl *)"
+      "Bash(curl *)",
+      "Bash(git branch *)",
+      "Bash(git remote *)",
+      "Bash(git add *)",
+      "Bash(git commit *)",
+      "Bash(git push *)"
     ]
   },
   "enabledPlugins": {
