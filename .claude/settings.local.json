@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "mcp__plugin_github_github__get_me",
+      "mcp__plugin_github_github__search_repositories",
+      "mcp__plugin_github_github__list_branches",
+      "Bash(python *)",
+      "Bash(curl -s -I \"https://github-readme-stats.vercel.app/api?username=tusharpatgar&show_icons=true&theme=tokyonight\")",
+      "Bash(curl -s -I \"https://github-readme-streak-stats.herokuapp.com/?user=tusharpatgar\")",
+      "Bash(curl -s -I \"https://streak-stats.demolab.com/?user=tusharpatgar\")",
+      "Bash(curl -s -I \"https://readme-typing-svg.demolab.com?lines=Data+Engineer\")",
+      "Bash(curl -s -I \"https://komarev.com/ghpvc/?username=tusharpatgar&color=007ec6&style=flat-square\")",
+      "Bash(curl -s -I \"https://github-profile-trophy.vercel.app/?username=tusharpatgar\")",
+      "Bash(curl -s -I \"https://github-readme-activity-graph.vercel.app/graph?username=tusharpatgar\")",
+      "Bash(curl -s -I \"https://img.shields.io/github/followers/tusharpatgar?label=Followers&style=for-the-badge&logo=github&color=2563EB\")",
+      "Bash(curl *)"
+    ]
+  },
+  "enabledPlugins": {
+    "github@anthropic-plugin-directory": true
+  }
+}
