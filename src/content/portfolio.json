@@ -33,7 +33,7 @@
         "Applied advanced query optimization, indexing strategies, and automated data reconciliation routines"
       ],
       "subtitle": "Layered Medallion Architecture with Star Schema Modeling",
-      "title": "SQL Data Ware",
+      "title": "SQL Data Warehouse",
       "id": "sql-dw",
       "repoUrl": "https://github.com/tusharpatgar/datawarehouseprojectsql",
       "badgeType": "primary"
