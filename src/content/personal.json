@@ -1,14 +1,14 @@
 {
-  "name": "Tushar T Patgar",
-  "role": "Data Engineer | ETL Developer",
-  "tagline": "Engineering reliable data pipelines. Transforming complex data into analytics-ready intelligence.",
-  "summary": "Data Engineer experienced in building enterprise ETL/ELT pipelines, AWS-based data solutions, distributed processing workflows and analytics-ready datasets across FinTech and analytics domains.",
-  "experienceYears": "1.4",
-  "location": "Bengaluru, India",
-  "email": "tusharpatgar1@gmail.com",
   "github": "https://github.com/tusharpatgar",
-  "linkedin": "https://www.linkedin.com/in/tushar-patgar-a78039348/",
+  "summary": "Data Engineer experienced in building enterprise ETL/ELT pipelines, AWS-based data solutions, distributed processing workflows and analytics-ready datasets across FinTech and analytics domains.",
   "resumePdfUrl": "/resume/Tushar_Patgar_Data_Engineer_Resume.pdf",
+  "name": "Tushar Patgar",
+  "experienceYears": "1.4",
+  "tagline": "Engineering reliable data pipelines. Transforming complex data into analytics-ready intelligence.",
+  "location": "Bengaluru, India",
+  "role": "Data Engineer | ETL Developer",
+  "email": "tusharpatgar1@gmail.com",
+  "linkedin": "https://www.linkedin.com/in/tushar-patgar-a78039348/",
   "stats": [
     {
       "label": "Experience",
