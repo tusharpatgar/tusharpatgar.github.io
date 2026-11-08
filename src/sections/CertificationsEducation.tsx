@@ -1,24 +1,26 @@
 import React from "react";
 import { motion } from "motion/react";
 import { BookOpen, GraduationCap, BadgeCheck } from "lucide-react";
-import { CERTIFICATIONS, EDUCATION } from "../data/portfolioData";
+import siteContent from "../content/site.json";
 
 export const CertificationsEducation: React.FC = () => {
+  const { credentials } = siteContent;
+  const { education } = credentials;
   return (
     <section id="certifications-education" className="relative py-20 md:py-28 border-t border-slate-900 bg-slate-950/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-            Credentials & Foundations
+            {credentials.eyebrow}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-            Verified Expertise & Academic Roots
+            {credentials.title}
           </h2>
         </div>
 
         {/* Certifications Card */}
         <div className="space-y-12">
-          {CERTIFICATIONS.map((cert, index) => (
+          {credentials.certificationEntries.map((cert, index) => (
             <motion.div
               key={`cert-${cert.title}`}
               initial={{ opacity: 0, y: 20 }}
@@ -37,10 +39,11 @@ export const CertificationsEducation: React.FC = () => {
               <h4 className="text-lg font-bold text-slate-100 group-hover:text-sky-300 transition-colors">
                 {cert.title}
               </h4>
-              <p className="text-xs text-slate-400 mt-1">{cert.issuer}</p>
+              <p className="text-xs text-slate-400 mt-1">{cert.issuer}{cert.year ? ` · ${cert.year}` : ""}</p>
+              {cert.credentialUrl && <a href={cert.credentialUrl} target="_blank" rel="noopener noreferrer" className="text-xs text-sky-400 underline mt-2 inline-block">View credential</a>}
               {cert.verified && (
                 <span className="inline-block mt-2 px-3 py-1 rounded-full text-[10px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/25 flex items-center gap-1">
-                  <BadgeCheck className="w-3 h-3" /> Verified
+                  <BadgeCheck className="w-3 h-3" /> {credentials.certificationVerifiedLabel}
                 </span>
               )}
             </motion.div>
@@ -51,7 +54,7 @@ export const CertificationsEducation: React.FC = () => {
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.4, delay: CERTIFICATIONS.length * 0.08 }}
+            transition={{ duration: 0.4, delay: credentials.certificationEntries.length * 0.08 }}
             className="p-8 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-950 to-indigo-950/40 border border-indigo-500/20"
           >
             <div className="flex items-start gap-4">
@@ -62,16 +65,15 @@ export const CertificationsEducation: React.FC = () => {
               </div>
               <div className="min-w-0 text-center sm:text-left">
                 <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-[11px] font-semibold bg-emerald-500/15 text-emerald-300 border border-emerald-500/25 mb-3">
-                  Graduate Degree
+                  {credentials.educationBadge}
                 </div>
                 <h4 className="text-xl font-bold text-slate-100 sm:text-2xl">
-                  {EDUCATION.degree}
+                  {education.degree}
                 </h4>
-                <p className="text-sm text-slate-400 mt-1">
-                  {EDUCATION.institution}
-                </p>
+                <p className="text-sm text-slate-400 mt-1">{education.institution} · {education.period}</p>
+                <p className="text-xs text-slate-500 mt-1">{education.field}</p>
                 <div className="mt-3 pt-3 border-t border-slate-800/60 grid grid-cols-1 md:grid-cols-2 gap-3">
-                  {EDUCATION.highlights.map((highlight) => (
+                  {education.highlights.map((highlight) => (
                     <div key={highlight} className="flex items-start gap-2 text-xs text-slate-300 leading-relaxed">
                       <BookOpen className="w-3.5 h-3.5 text-sky-400 mt-0.5 shrink-0" />
                       <span>{highlight}</span>

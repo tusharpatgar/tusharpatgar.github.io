@@ -2,24 +2,12 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, FileDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
-import { PERSONAL_INFO } from "../data/portfolioData";
+import siteContent from "../content/site.json";
 
-interface NavLink {
-  label: string;
-  href: string;
-}
-
-const navLinks: NavLink[] = [
-  { label: "About", href: "#about" },
-  { label: "Skills", href: "#skills" },
-  { label: "Experience", href: "#experience" },
-  { label: "Projects", href: "#projects" },
-  { label: "Architecture", href: "#architecture" },
-  { label: "Credentials", href: "#certifications-education" },
-  { label: "Contact", href: "#contact" },
-];
+const navLinks = siteContent.navigation;
 
 export const Navbar: React.FC = () => {
+  const { personal, media } = siteContent;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
@@ -47,9 +35,7 @@ export const Navbar: React.FC = () => {
             className="flex items-center gap-2.5 font-bold text-slate-100 hover:text-sky-300 transition-colors group"
             aria-label="Tushar Patgar Home"
           >
-            <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center font-black text-slate-950 text-xs shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">
-              TP
-            </span>
+            {media.logoImage ? <img src={media.logoImage} alt={personal.name} className="w-8 h-8 rounded-lg object-contain" /> : <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center font-black text-slate-950 text-xs shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">TP</span>}
             <div className="flex flex-col">
               <span className="text-sm font-extrabold tracking-tight text-slate-100 group-hover:text-sky-300 transition-colors">
                 Tushar Patgar
@@ -76,7 +62,7 @@ export const Navbar: React.FC = () => {
           {/* Social Icons & Resume CTA */}
           <div className="hidden sm:flex items-center gap-2">
             <a
-              href={PERSONAL_INFO.github}
+              href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
@@ -86,7 +72,7 @@ export const Navbar: React.FC = () => {
             </a>
 
             <a
-              href={PERSONAL_INFO.linkedin}
+              href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
@@ -96,7 +82,7 @@ export const Navbar: React.FC = () => {
             </a>
 
             <a
-              href={PERSONAL_INFO.resumePdfUrl}
+              href={media.resume || personal.resumePdfUrl}
               download="Tushar_Patgar_Data_Engineer_Resume.pdf"
               className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-xs font-semibold bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-500/30 hover:border-sky-500/50 transition-all"
             >
@@ -138,7 +124,7 @@ export const Navbar: React.FC = () => {
 
               <div className="pt-3 border-t border-slate-800/80 flex items-center justify-between gap-3">
                 <a
-                  href={PERSONAL_INFO.resumePdfUrl}
+                  href={media.resume || personal.resumePdfUrl}
                   download="Tushar_Patgar_Data_Engineer_Resume.pdf"
                   className="flex-1 inline-flex items-center justify-center gap-1.5 px-3 py-2 rounded-lg text-xs font-semibold bg-sky-400 text-slate-950 transition-all"
                 >
@@ -148,7 +134,7 @@ export const Navbar: React.FC = () => {
 
                 <div className="flex items-center gap-2">
                   <a
-                    href={PERSONAL_INFO.github}
+                    href={personal.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
@@ -156,7 +142,7 @@ export const Navbar: React.FC = () => {
                     <GithubIcon className="w-4 h-4" />
                   </a>
                   <a
-                    href={PERSONAL_INFO.linkedin}
+                    href={personal.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="p-2 rounded-lg bg-slate-900 border border-slate-800 text-slate-300 hover:text-white"
