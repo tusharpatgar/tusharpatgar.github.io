@@ -1,7 +1,7 @@
 backend:
   name: turbo-github
-  turbo_site_id: ed6f9647-ce2f-4bcb-8c88-e4f4b52847de
-  branch: main
+  turbo_site_id: b36f2b77-cc04-45c9-b538-196f242c0a9a
+  branch: cms-full-portfolio
 
 media_folder: "public/uploads"
 public_folder: "/uploads"
@@ -9,11 +9,248 @@ public_folder: "/uploads"
 publish_mode: simple
 
 collections:
-  - name: "portfolio"
-    label: "Portfolio Content"
+  - name: "site"
+    label: "Site & Global Settings"
+    files:
+      - name: "site-content"
+        label: "Site Content"
+        file: "src/content/site.json"
+        format: "json"
+        fields:
+          - label: "Personal & Contact Details"
+            name: "personal"
+            widget: "object"
+            fields:
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Role", name: "role", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "string" }
+              - { label: "Professional Summary", name: "summary", widget: "text" }
+              - { label: "Years of Experience", name: "experienceYears", widget: "string" }
+              - { label: "Location", name: "location", widget: "string" }
+              - { label: "Email", name: "email", widget: "string" }
+              - { label: "GitHub URL", name: "github", widget: "string" }
+              - { label: "LinkedIn URL", name: "linkedin", widget: "string" }
+              - { label: "Resume URL", name: "resumePdfUrl", widget: "string" }
+              - label: "Statistics"
+                name: "stats"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+                  - { label: "Icon Name", name: "icon", widget: "string", required: false }
+          - label: "Media & Assets"
+            name: "media"
+            widget: "object"
+            fields:
+              - { label: "Hero Image", name: "heroImage", widget: "image", required: false }
+              - { label: "Hero Image Alt Text", name: "heroImageAlt", widget: "string", required: false }
+              - { label: "About Image", name: "aboutImage", widget: "image", required: false }
+              - { label: "About Image Alt Text", name: "aboutImageAlt", widget: "string", required: false }
+              - { label: "Architecture Diagram", name: "architectureImage", widget: "image", required: false }
+              - { label: "Architecture Image Alt Text", name: "architectureImageAlt", widget: "string", required: false }
+              - { label: "Logo Image", name: "logoImage", widget: "image", required: false }
+              - { label: "Favicon", name: "favicon", widget: "image", required: false }
+              - { label: "Social Preview Image", name: "socialPreviewImage", widget: "image", required: false }
+              - { label: "Resume PDF", name: "resume", widget: "file", required: false }
+          - label: "Navigation Links"
+            name: "navigation"
+            widget: "list"
+            fields:
+              - { label: "Label", name: "label", widget: "string" }
+              - { label: "Destination", name: "href", widget: "string" }
+          - label: "Hero Section"
+            name: "hero"
+            widget: "object"
+            fields:
+              - { label: "Availability Label", name: "availabilityLabel", widget: "string" }
+              - { label: "Name", name: "name", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Tagline", name: "tagline", widget: "text" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Primary Button", name: "primaryCtaLabel", widget: "string" }
+              - { label: "Resume Button", name: "secondaryCtaLabel", widget: "string" }
+              - { label: "Contact Button", name: "contactCtaLabel", widget: "string" }
+              - { label: "Terminal Title", name: "terminalTitle", widget: "string" }
+              - { label: "Terminal Status", name: "terminalStatus", widget: "string" }
+              - { label: "Terminal Comment", name: "terminalComment", widget: "string" }
+              - { label: "Terminal Code", name: "terminalCode", widget: "text" }
+              - label: "Terminal Metrics"
+                name: "terminalMetrics"
+                widget: "list"
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
+              - { label: "Experience Card Title", name: "experienceCardTitle", widget: "string" }
+              - { label: "Experience Card Subtitle", name: "experienceCardSubtitle", widget: "string" }
+              - { label: "Social Links Label", name: "statsLabel", widget: "string" }
+          - label: "About Section"
+            name: "about"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Intro", name: "intro", widget: "text" }
+              - { label: "Biography Heading", name: "biographyTitle", widget: "string" }
+              - label: "Biography Paragraphs"
+                name: "biography"
+                widget: "list"
+                field: { label: "Paragraph", name: "paragraph", widget: "text" }
+              - { label: "Summary Card Heading", name: "summaryTitle", widget: "string" }
+              - { label: "Industries", name: "industries", widget: "string" }
+              - { label: "Primary Cloud", name: "primaryCloud", widget: "string" }
+              - { label: "Capabilities Heading", name: "capabilityTitle", widget: "string" }
+              - { label: "Capabilities Subtitle", name: "capabilitySubtitle", widget: "text" }
+              - label: "About Highlights"
+                name: "highlights"
+                widget: "list"
+                field: { label: "Highlight", name: "highlight", widget: "string" }
+              - label: "Capabilities"
+                name: "capabilities"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Tags"
+                    name: "tags"
+                    widget: "list"
+                    field: { label: "Tag", name: "tag", widget: "string" }
+          - label: "Skills Section"
+            name: "skills"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Methodologies Heading", name: "methodologyTitle", widget: "string" }
+              - { label: "Methodologies Text", name: "methodologyText", widget: "text" }
+              - { label: "Methodologies Button", name: "methodologyCta", widget: "string" }
+              - label: "Skill Categories"
+                name: "categories"
+                widget: "list"
+                fields:
+                  - { label: "Category", name: "category", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - label: "Skills"
+                    name: "skills"
+                    widget: "list"
+                    fields:
+                      - { label: "Name", name: "name", widget: "string" }
+                      - { label: "Level", name: "level", widget: "string", required: false }
+                      - { label: "Highlighted", name: "highlighted", widget: "boolean", default: false }
+          - label: "Experience Section"
+            name: "experience"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - label: "Experience Entries"
+                name: "entries"
+                widget: "list"
+                fields:
+                  - { label: "Company", name: "company", widget: "string" }
+                  - { label: "Role", name: "role", widget: "string" }
+                  - { label: "Period", name: "period", widget: "string" }
+                  - { label: "Location", name: "location", widget: "string" }
+                  - { label: "Domain", name: "domain", widget: "string" }
+                  - label: "Responsibilities"
+                    name: "responsibilities"
+                    widget: "list"
+                    field: { label: "Responsibility", name: "responsibility", widget: "string" }
+                  - label: "Technologies"
+                    name: "technologies"
+                    widget: "list"
+                    field: { label: "Technology", name: "technology", widget: "string" }
+          - label: "Architecture Section"
+            name: "architecture"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Info Note", name: "note", widget: "text" }
+              - { label: "Inspector Label", name: "inspectorLabel", widget: "string" }
+              - { label: "Highlight Label", name: "highlightLabel", widget: "string" }
+              - { label: "Technologies Label", name: "technologiesLabel", widget: "string" }
+              - { label: "Specifications Heading", name: "specsTitle", widget: "string" }
+              - { label: "Audit Label", name: "auditLabel", widget: "string" }
+              - { label: "Audit Value", name: "auditValue", widget: "string" }
+              - { label: "Lineage Label", name: "lineageLabel", widget: "string" }
+              - label: "Pipeline Stages"
+                name: "stages"
+                widget: "list"
+                fields:
+                  - { label: "ID", name: "id", widget: "string" }
+                  - { label: "Number", name: "number", widget: "string" }
+                  - { label: "Name", name: "name", widget: "string" }
+                  - { label: "Category", name: "category", widget: "string" }
+                  - { label: "Description", name: "description", widget: "text" }
+                  - { label: "Highlight", name: "highlight", widget: "text" }
+                  - { label: "Latency / SLA", name: "latency", widget: "string" }
+                  - { label: "Data Format", name: "format", widget: "string" }
+                  - label: "Technologies"
+                    name: "technologies"
+                    widget: "list"
+                    field: { label: "Technology", name: "technology", widget: "string" }
+          - label: "Credentials & Education"
+            name: "credentials"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Verified Label", name: "certificationVerifiedLabel", widget: "string" }
+              - { label: "Education Badge", name: "educationBadge", widget: "string" }
+              - label: "Certifications"
+                name: "certificationEntries"
+                widget: "list"
+                fields:
+                  - { label: "Title", name: "title", widget: "string" }
+                  - { label: "Issuer", name: "issuer", widget: "string" }
+                  - { label: "Type", name: "type", widget: "string" }
+                  - { label: "Year", name: "year", widget: "string", required: false }
+                  - { label: "Verified", name: "verified", widget: "boolean", default: false }
+                  - { label: "Credential URL", name: "credentialUrl", widget: "string", required: false }
+              - label: "Education"
+                name: "education"
+                widget: "object"
+                fields:
+                  - { label: "Degree", name: "degree", widget: "string" }
+                  - { label: "Period", name: "period", widget: "string" }
+                  - { label: "Field", name: "field", widget: "string" }
+                  - { label: "Institution", name: "institution", widget: "string" }
+                  - label: "Highlights"
+                    name: "highlights"
+                    widget: "list"
+                    field: { label: "Highlight", name: "highlight", widget: "text" }
+          - label: "Contact Section"
+            name: "contact"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Direct Contact Label", name: "directContactLabel", widget: "string" }
+              - { label: "Location Label", name: "locationLabel", widget: "string" }
+              - { label: "Email Label", name: "emailLabel", widget: "string" }
+              - { label: "Availability Label", name: "availabilityLabel", widget: "string" }
+              - { label: "Email Button", name: "emailButton", widget: "string" }
+              - { label: "Copy Button", name: "copyButton", widget: "string" }
+              - { label: "Copied Button", name: "copiedButton", widget: "string" }
+              - { label: "Resume Button", name: "resumeButton", widget: "string" }
+              - { label: "Email Subject", name: "subject", widget: "string" }
+          - label: "Footer"
+            name: "footer"
+            widget: "object"
+            fields:
+              - { label: "Copyright Prefix", name: "copyrightPrefix", widget: "string" }
+              - { label: "Built With Text", name: "builtWith", widget: "string" }
+              - { label: "Deployment Status", name: "deploymentStatus", widget: "string" }
+
+  - name: "projects"
+    label: "Projects"
     files:
       - name: "projects"
-        label: "Projects"
+        label: "Project Portfolio"
         file: "src/content/portfolio.json"
         format: "json"
         fields:
@@ -26,12 +263,11 @@ collections:
               - { label: "Title", name: "title", widget: "string" }
               - { label: "Subtitle", name: "subtitle", widget: "string" }
               - { label: "Badge", name: "badge", widget: "string" }
-              - label: "Badge Style"
-                name: "badgeType"
-                widget: "select"
-                options: ["primary", "secondary", "accent"]
+              - { label: "Badge Style", name: "badgeType", widget: "select", options: ["primary", "secondary", "accent"] }
               - { label: "Architecture / Data Flow", name: "architecture", widget: "text" }
               - { label: "Summary", name: "summary", widget: "text" }
+              - { label: "Project Image", name: "image", widget: "image", required: false }
+              - { label: "Image Alt Text", name: "imageAlt", widget: "string", required: false }
               - label: "Key Implementation Highlights"
                 name: "deliverables"
                 widget: "list"
