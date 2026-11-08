@@ -93,7 +93,7 @@ export const ExperienceSection: React.FC = () => {
                       <div className="mt-5 pt-4 border-t border-slate-800/80">
                         <div className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-1">
                           <Tag className="w-3 h-3" />
-                          Technologies Used
+                          {experience.technologiesLabel}
                         </div>
                         <div className="flex flex-wrap gap-1.5">
                           {event.technologies.map((tech) => (

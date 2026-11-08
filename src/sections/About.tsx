@@ -76,27 +76,27 @@ export const About: React.FC = () => {
 
               <div className="space-y-3 divide-y divide-slate-800/80 text-sm">
                 <div className="flex justify-between py-2">
-                  <span className="text-slate-400">Role</span>
+                  <span className="text-slate-400">{about.roleLabel}</span>
                   <span className="text-slate-100 font-medium">{personal.role}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-slate-400">Location</span>
+                  <span className="text-slate-400">{about.locationLabel}</span>
                   <span className="text-slate-100 font-medium">{personal.location}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-slate-400">Experience</span>
+                  <span className="text-slate-400">{about.experienceLabel}</span>
                   <span className="text-emerald-400 font-semibold">{personal.experienceYears} Years</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-slate-400">Industries</span>
+                  <span className="text-slate-400">{about.industriesLabel}</span>
                   <span className="text-slate-100 font-medium">{about.industries}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-slate-400">Primary Cloud</span>
+                  <span className="text-slate-400">{about.primaryCloudLabel}</span>
                   <span className="text-sky-400 font-medium">{about.primaryCloud}</span>
                 </div>
                 <div className="flex justify-between py-2">
-                  <span className="text-slate-400">Email</span>
+                  <span className="text-slate-400">{about.emailLabel}</span>
                   <a
                     href={`mailto:${personal.email}`}
                     className="text-sky-300 hover:underline font-mono text-xs"

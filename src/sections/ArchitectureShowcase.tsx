@@ -182,7 +182,7 @@ export const ArchitectureShowcase: React.FC = () => {
                     <div className="flex items-center justify-between pt-1">
                       <span className="text-slate-400 flex items-center gap-2">
                         <Clock className="w-4 h-4 text-sky-400" />
-                        Target Latency / SLA:
+                        {architecture.latencyLabel}
                       </span>
                       <span className="font-mono font-semibold text-emerald-400">
                         {selectedStage.latency}
@@ -192,7 +192,7 @@ export const ArchitectureShowcase: React.FC = () => {
                     <div className="flex items-center justify-between pt-3">
                       <span className="text-slate-400 flex items-center gap-2">
                         <HardDrive className="w-4 h-4 text-purple-400" />
-                        Data Format:
+                        {architecture.formatLabel}
                       </span>
                       <span className="font-mono text-slate-200 text-xs">
                         {selectedStage.format}
