@@ -1,28 +1,6 @@
 {
   "projects": [
     {
-      "id": "sql-dw",
-      "title": "SQL Data Warehouse",
-      "subtitle": "Layered Medallion Architecture with Star Schema Modeling",
-      "badge": "Production Architecture",
-      "badgeType": "primary",
-      "architecture": "Bronze (Raw Ingestion) ➔ Silver (Cleansed/Normalized) ➔ Gold (Business Dimensions & Facts)",
-      "summary": "Engineered an enterprise-grade analytical data warehouse showcasing end-to-end data warehousing best practices. Implemented layered bronze/silver/gold data structures, star-schema modeling, and historical change tracking.",
-      "deliverables": [
-        "Designed star schema dimensional model with partitioned Fact and Dimension tables",
-        "Authored optimized T-SQL ETL workflows for extraction, cleansing, validation, and staging",
-        "Implemented Slowly Changing Dimensions (SCD Type 1 & Type 2) for historical auditing",
-        "Applied advanced query optimization, indexing strategies, and automated data reconciliation routines"
-      ],
-      "technologies": [
-        "SQL Server",
-        "T-SQL",
-        "Star Schema",
-        "Data Warehousing",
-        "SSMS",
-        "SCD 1 & 2"
-      ],
-      "repoUrl": "https://github.com/tusharpatgar/datawarehouseprojectsql",
       "metrics": [
         {
           "label": "Layers",
@@ -36,31 +14,31 @@
           "label": "Model",
           "value": "Star Schema"
         }
-      ]
+      ],
+      "badge": "Production Architecture",
+      "summary": "Engineered an enterprise-grade analytical data warehouse showcasing end-to-end data warehousing best practices. Implemented layered bronze/silver/gold data structures, star-schema modeling, and historical change tracking.",
+      "technologies": [
+        "SQL Server",
+        "T-SQL",
+        "Star Schema",
+        "Data Warehousing",
+        "SSMS",
+        "SCD 1 & 2"
+      ],
+      "architecture": "Bronze (Raw Ingestion) ➔ Silver (Cleansed/Normalized) ➔ Gold (Business Dimensions & Facts)",
+      "deliverables": [
+        "Designed star schema dimensional model with partitioned Fact and Dimension tables",
+        "Authored optimized T-SQL ETL workflows for extraction, cleansing, validation, and staging",
+        "Implemented Slowly Changing Dimensions (SCD Type 1 & Type 2) for historical auditing",
+        "Applied advanced query optimization, indexing strategies, and automated data reconciliation routines"
+      ],
+      "subtitle": "Layered Medallion Architecture with Star Schema Modeling",
+      "title": "SQL Data Ware",
+      "id": "sql-dw",
+      "repoUrl": "https://github.com/tusharpatgar/datawarehouseprojectsql",
+      "badgeType": "primary"
     },
     {
-      "id": "walmart-sales",
-      "title": "Walmart Sales Analytics",
-      "subtitle": "Databricks PySpark Lakehouse with Incremental Delta Lake Upserts",
-      "badge": "Big Data & Lakehouse",
-      "badgeType": "accent",
-      "architecture": "Databricks PySpark Lakehouse ➔ Delta Lake ACID Storage ➔ Analytical Aggregations",
-      "summary": "Built a distributed retail analytics data pipeline processing high-volume transaction feeds with strict schema validation, business-rule transformations, and incremental upserts.",
-      "deliverables": [
-        "Enforced schema validation and bad-record quarantine logic to eliminate corrupt ingestions",
-        "Developed business-rule transformations, time-series aggregations, and metric calculations",
-        "Implemented incremental processing using Delta Lake MERGE INTO syntax for fast deduplication",
-        "Configured partition pruning, Z-ordering, and in-memory caching for low-latency queries"
-      ],
-      "technologies": [
-        "Databricks",
-        "Apache Spark",
-        "PySpark",
-        "Delta Lake",
-        "Python",
-        "Spark SQL"
-      ],
-      "repoUrl": "https://github.com/tusharpatgar/walmart_sales_etl",
       "metrics": [
         {
           "label": "Engine",
@@ -74,32 +52,31 @@
           "label": "Method",
           "value": "Incremental MERGE"
         }
-      ]
+      ],
+      "badge": "Big Data & Lakehouse",
+      "summary": "Built a distributed retail analytics data pipeline processing high-volume transaction feeds with strict schema validation, business-rule transformations, and incremental upserts.",
+      "technologies": [
+        "Databricks",
+        "Apache Spark",
+        "PySpark",
+        "Delta Lake",
+        "Python",
+        "Spark SQL"
+      ],
+      "architecture": "Databricks PySpark Lakehouse ➔ Delta Lake ACID Storage ➔ Analytical Aggregations",
+      "deliverables": [
+        "Enforced schema validation and bad-record quarantine logic to eliminate corrupt ingestions",
+        "Developed business-rule transformations, time-series aggregations, and metric calculations",
+        "Implemented incremental processing using Delta Lake MERGE INTO syntax for fast deduplication",
+        "Configured partition pruning, Z-ordering, and in-memory caching for low-latency queries"
+      ],
+      "subtitle": "Databricks PySpark Lakehouse with Incremental Delta Lake Upserts",
+      "title": "Walmart Sales Analytics",
+      "id": "walmart-sales",
+      "repoUrl": "https://github.com/tusharpatgar/walmart_sales_etl",
+      "badgeType": "accent"
     },
     {
-      "id": "aws-cdc",
-      "title": "AWS CDC Pipeline",
-      "subtitle": "Event-Driven Change Data Capture with DMS, Lambda, Glue & S3",
-      "badge": "Enterprise Implementation",
-      "badgeType": "secondary",
-      "architecture": "RDS MySQL ➔ AWS DMS ➔ S3 Bronze ➔ Lambda Event ➔ Glue ETL ➔ Redshift / S3 Gold",
-      "summary": "Architected a serverless event-driven Change Data Capture pipeline streaming real-time transactional modifications into a curated cloud lakehouse and Redshift warehouse.",
-      "deliverables": [
-        "Configured continuous binlog Change Data Capture replication via AWS Database Migration Service (DMS)",
-        "Engineered event-driven orchestration triggering AWS Lambda on S3 raw landing events",
-        "Developed PySpark AWS Glue ETL jobs executing deduplication, schema normalization, and SCD tracking",
-        "Established comprehensive observability, CloudWatch alarms, and metric dashboards for SLA compliance"
-      ],
-      "technologies": [
-        "AWS RDS",
-        "AWS DMS",
-        "AWS Lambda",
-        "AWS Glue",
-        "Amazon S3",
-        "Amazon Redshift",
-        "Amazon CloudWatch",
-        "PySpark"
-      ],
       "metrics": [
         {
           "label": "Ingestion",
@@ -113,7 +90,30 @@
           "label": "Monitoring",
           "value": "CloudWatch Telemetry"
         }
-      ]
+      ],
+      "badge": "Enterprise Implementation",
+      "summary": "Architected a serverless event-driven Change Data Capture pipeline streaming real-time transactional modifications into a curated cloud lakehouse and Redshift warehouse.",
+      "technologies": [
+        "AWS RDS",
+        "AWS DMS",
+        "AWS Lambda",
+        "AWS Glue",
+        "Amazon S3",
+        "Amazon Redshift",
+        "Amazon CloudWatch",
+        "PySpark"
+      ],
+      "architecture": "RDS MySQL ➔ AWS DMS ➔ S3 Bronze ➔ Lambda Event ➔ Glue ETL ➔ Redshift / S3 Gold",
+      "deliverables": [
+        "Configured continuous binlog Change Data Capture replication via AWS Database Migration Service (DMS)",
+        "Engineered event-driven orchestration triggering AWS Lambda on S3 raw landing events",
+        "Developed PySpark AWS Glue ETL jobs executing deduplication, schema normalization, and SCD tracking",
+        "Established comprehensive observability, CloudWatch alarms, and metric dashboards for SLA compliance"
+      ],
+      "subtitle": "Event-Driven Change Data Capture with DMS, Lambda, Glue & S3",
+      "title": "AWS CDC Pipeline",
+      "id": "aws-cdc",
+      "badgeType": "secondary"
     }
   ]
 }
