@@ -209,23 +209,28 @@
         "skills": [
           {
             "name": "Python",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "SQL",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "T-SQL",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "PySpark",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Spark SQL",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           }
         ]
       },
@@ -235,25 +240,31 @@
         "skills": [
           {
             "name": "Apache Spark",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "PySpark",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Databricks",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Delta Lake",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
-            "name": "Apache Kafka"
+            "name": "Apache Kafka",
+            "level": ""
           },
           {
-            "name": "Apache Parquet"
+            "name": "Apache Parquet",
+            "level": ""
           }
         ]
       },
@@ -263,41 +274,52 @@
         "skills": [
           {
             "name": "Amazon S3",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "AWS Glue",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "AWS Lambda",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Amazon Redshift",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "AWS DMS",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
-            "name": "Amazon Athena"
+            "name": "Amazon Athena",
+            "level": ""
           },
           {
-            "name": "AWS Step Functions"
+            "name": "AWS Step Functions",
+            "level": ""
           },
           {
-            "name": "Amazon CloudWatch"
+            "name": "Amazon CloudWatch",
+            "level": ""
           },
           {
-            "name": "AWS IAM"
+            "name": "AWS IAM",
+            "level": ""
           },
           {
-            "name": "AWS CLI"
+            "name": "AWS CLI",
+            "level": ""
           },
           {
-            "name": "Amazon EC2"
+            "name": "Amazon EC2",
+            "level": ""
           }
         ]
       },
@@ -307,19 +329,24 @@
         "skills": [
           {
             "name": "Microsoft SQL Server",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
-            "name": "PostgreSQL"
+            "name": "PostgreSQL",
+            "level": ""
           },
           {
-            "name": "MySQL"
+            "name": "MySQL",
+            "level": ""
           },
           {
-            "name": "Snowflake"
+            "name": "Snowflake",
+            "level": ""
           },
           {
-            "name": "SSMS"
+            "name": "SSMS",
+            "level": ""
           }
         ]
       },
@@ -329,27 +356,34 @@
         "skills": [
           {
             "name": "Apache Airflow",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "dbt (Data Build Tool)",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "SSIS",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
-            "name": "Docker"
+            "name": "Docker",
+            "level": ""
           },
           {
-            "name": "Git"
+            "name": "Git",
+            "level": ""
           },
           {
-            "name": "GitHub Actions"
+            "name": "GitHub Actions",
+            "level": ""
           },
           {
-            "name": "Linux / Bash"
+            "name": "Linux / Bash",
+            "level": ""
           }
         ]
       },
@@ -359,30 +393,37 @@
         "skills": [
           {
             "name": "ETL / ELT Pipelines",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Medallion Architecture",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "CDC Replication",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "SCD Type 1 & 2",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Star Schema Modeling",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
             "name": "Data Quality & Reconciliation",
-            "highlighted": true
+            "highlighted": true,
+            "level": ""
           },
           {
-            "name": "Schema Drift Detection"
+            "name": "Schema Drift Detection",
+            "level": ""
           }
         ]
       }
