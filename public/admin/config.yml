@@ -1,0 +1,51 @@
+backend:
+  name: turbo-github
+  turbo_site_id: b36f2b77-cc04-45c9-b538-196f242c0a9a
+  branch: main
+
+media_folder: "public/uploads"
+public_folder: "/uploads"
+
+publish_mode: simple
+
+collections:
+  - name: "portfolio"
+    label: "Portfolio Content"
+    files:
+      - name: "projects"
+        label: "Projects"
+        file: "src/content/portfolio.json"
+        format: "json"
+        fields:
+          - label: "Projects"
+            name: "projects"
+            widget: "list"
+            summary: "{{fields.title}}"
+            fields:
+              - { label: "ID", name: "id", widget: "string" }
+              - { label: "Title", name: "title", widget: "string" }
+              - { label: "Subtitle", name: "subtitle", widget: "string" }
+              - { label: "Badge", name: "badge", widget: "string" }
+              - label: "Badge Style"
+                name: "badgeType"
+                widget: "select"
+                options: ["primary", "secondary", "accent"]
+              - { label: "Architecture / Data Flow", name: "architecture", widget: "text" }
+              - { label: "Summary", name: "summary", widget: "text" }
+              - label: "Key Implementation Highlights"
+                name: "deliverables"
+                widget: "list"
+                field: { label: "Highlight", name: "highlight", widget: "string" }
+              - label: "Technologies"
+                name: "technologies"
+                widget: "list"
+                field: { label: "Technology", name: "technology", widget: "string" }
+              - { label: "Repository URL", name: "repoUrl", widget: "string", required: false }
+              - { label: "Live Demo URL", name: "liveUrl", widget: "string", required: false }
+              - label: "Metrics"
+                name: "metrics"
+                widget: "list"
+                required: false
+                fields:
+                  - { label: "Label", name: "label", widget: "string" }
+                  - { label: "Value", name: "value", widget: "string" }
