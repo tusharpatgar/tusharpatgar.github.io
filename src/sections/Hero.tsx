@@ -161,7 +161,6 @@ export const Hero: React.FC = () => {
                   {hero.terminalMetrics.map((metric) => <div key={metric.label} className="flex items-center justify-between text-slate-400"><span>{metric.label}</span><span className="text-slate-200">{metric.value}</span></div>)}
                 </div>
               </div>
-              </div>
             </div>
 
             {/* Quick Stat Floating Card */}
