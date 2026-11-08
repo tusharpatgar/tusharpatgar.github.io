@@ -33,7 +33,7 @@ export const Navbar: React.FC = () => {
           <a
             href="#"
             className="flex items-center gap-2.5 font-bold text-slate-100 hover:text-sky-300 transition-colors group"
-            aria-label="Tushar Patgar Home"
+            aria-label={`${personal.name} Home`}
           >
             {media.logoImage ? <img src={media.logoImage} alt={personal.name} className="w-8 h-8 rounded-lg object-contain" /> : <span className="w-8 h-8 rounded-lg bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center font-black text-slate-950 text-xs shadow-md shadow-sky-500/20 group-hover:scale-105 transition-transform">TP</span>}
             <div className="flex flex-col">

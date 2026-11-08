@@ -11,8 +11,12 @@ const applyPortfolioMetadata = () => {
     if (element && value) element.content = value;
   };
   setMeta('meta[name="description"]', siteContent.personal.summary);
+  setMeta('meta[name="author"]', siteContent.personal.name);
+  setMeta('meta[name="application-name"]', siteContent.personal.name);
   setMeta('meta[property="og:title"]', `${siteContent.personal.name} | ${siteContent.personal.role}`);
   setMeta('meta[property="og:description"]', siteContent.personal.summary);
+  setMeta('meta[name="twitter:title"]', `${siteContent.personal.name} | ${siteContent.personal.role}`);
+  setMeta('meta[name="twitter:description"]', siteContent.personal.summary);
   setMeta('meta[property="og:image"]', siteContent.media.socialPreviewImage);
   setMeta('meta[name="twitter:image"]', siteContent.media.socialPreviewImage);
   if (siteContent.media.favicon) {
