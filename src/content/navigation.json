@@ -1,0 +1,32 @@
+{
+  "links": [
+    {
+      "label": "About",
+      "href": "#about"
+    },
+    {
+      "label": "Skills",
+      "href": "#skills"
+    },
+    {
+      "label": "Experience",
+      "href": "#experience"
+    },
+    {
+      "label": "Projects",
+      "href": "#projects"
+    },
+    {
+      "label": "Architecture",
+      "href": "#architecture"
+    },
+    {
+      "label": "Credentials",
+      "href": "#certifications-education"
+    },
+    {
+      "label": "Contact",
+      "href": "#contact"
+    }
+  ]
+}

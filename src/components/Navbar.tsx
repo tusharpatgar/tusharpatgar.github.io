@@ -2,12 +2,15 @@ import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "motion/react";
 import { Menu, X, FileDown } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
-import siteContent from "../content/site.json";
+import personalContent from "../content/personal.json";
+import mediaContent from "../content/media.json";
+import navigationContent from "../content/navigation.json";
 
-const navLinks = siteContent.navigation;
+const navLinks = navigationContent.links;
 
 export const Navbar: React.FC = () => {
-  const { personal, media } = siteContent;
+  const personal = personalContent;
+  const media = mediaContent;
   const [mobileOpen, setMobileOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 

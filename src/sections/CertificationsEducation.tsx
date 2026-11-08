@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { BookOpen, GraduationCap, BadgeCheck } from "lucide-react";
-import siteContent from "../content/site.json";
+import credentialsContent from "../content/credentials.json";
 
 export const CertificationsEducation: React.FC = () => {
-  const { credentials } = siteContent;
+  const credentials = credentialsContent;
   const { education } = credentials;
   return (
     <section id="certifications-education" className="relative py-20 md:py-28 border-t border-slate-900 bg-slate-950/60">

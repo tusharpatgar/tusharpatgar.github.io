@@ -1,10 +1,16 @@
 import React from "react";
 import { ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
-import siteContent from "../content/site.json";
+import personalContent from "../content/personal.json";
+import mediaContent from "../content/media.json";
+import navigationContent from "../content/navigation.json";
+import footerContent from "../content/footer.json";
 
 export const Footer: React.FC = () => {
-  const { personal, navigation, footer, media } = siteContent;
+  const personal = personalContent;
+  const navigation = navigationContent.links;
+  const footer = footerContent;
+  const media = mediaContent;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };

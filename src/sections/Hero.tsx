@@ -9,10 +9,14 @@ import {
   Terminal,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/SocialIcons";
-import siteContent from "../content/site.json";
+import heroContent from "../content/hero.json";
+import personalContent from "../content/personal.json";
+import mediaContent from "../content/media.json";
 
 export const Hero: React.FC = () => {
-  const { hero, personal, media } = siteContent;
+  const hero = heroContent;
+  const personal = personalContent;
+  const media = mediaContent;
   return (
     <section className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex items-center justify-center overflow-hidden">
       {/* Background ambient glow & grid effect */}

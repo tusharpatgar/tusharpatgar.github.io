@@ -9,10 +9,14 @@ import {
   BarChart3,
   CheckCircle2,
 } from "lucide-react";
-import siteContent from "../content/site.json";
+import aboutContent from "../content/about.json";
+import personalContent from "../content/personal.json";
+import mediaContent from "../content/media.json";
 
 export const About: React.FC = () => {
-  const { about, personal, media } = siteContent;
+  const about = aboutContent;
+  const personal = personalContent;
+  const media = mediaContent;
   const capabilityIcons = [
     Layers,
     Database,

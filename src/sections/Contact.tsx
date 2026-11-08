@@ -9,10 +9,14 @@ import {
   FileDown,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/SocialIcons";
-import siteContent from "../content/site.json";
+import personalContent from "../content/personal.json";
+import contactContent from "../content/contact.json";
+import mediaContent from "../content/media.json";
 
 export const Contact: React.FC = () => {
-  const { personal, contact, media } = siteContent;
+  const personal = personalContent;
+  const contact = contactContent;
+  const media = mediaContent;
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = async () => {

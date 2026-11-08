@@ -1,10 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { CheckCircle2, Briefcase, Calendar, MapPin, Tag } from "lucide-react";
-import siteContent from "../content/site.json";
+import experienceContent from "../content/experience.json";
 
 export const ExperienceSection: React.FC = () => {
-  const { experience } = siteContent;
+  const experience = experienceContent;
   return (
     <section
       id="experience"

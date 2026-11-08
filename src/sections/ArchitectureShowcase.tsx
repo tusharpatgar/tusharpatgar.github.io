@@ -12,10 +12,12 @@ import {
   Sparkles,
   Info,
 } from "lucide-react";
-import siteContent from "../content/site.json";
+import architectureContent from "../content/architecture.json";
+import mediaContent from "../content/media.json";
 
 export const ArchitectureShowcase: React.FC = () => {
-  const { architecture, media } = siteContent;
+  const architecture = architectureContent;
+  const media = mediaContent;
   const [selectedStageIndex, setSelectedStageIndex] = useState(2); // Default to Processing stage
   const selectedStage = architecture.stages[selectedStageIndex];
 

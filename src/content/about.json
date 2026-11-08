@@ -1,0 +1,89 @@
+{
+  "eyebrow": "About Me",
+  "title": "Engineering Data with Precision & Reliability",
+  "intro": "Architecting robust data foundations for enterprise FinTech systems, ensuring regulatory consistency, schema integrity, and sub-second analytical readiness.",
+  "biography": [
+    "I am a Data Engineer with 1.4 years of professional experience developing enterprise-scale ETL/ELT pipelines and cloud-based data solutions across FinTech and analytics domains. I specialize in designing Medallion (Bronze–Silver–Gold) lakehouses, streaming Change Data Capture (CDC) flows, and establishing automated reconciliation frameworks that safeguard financial transaction integrity.",
+    "My hands-on technical core blends Python, PySpark, SQL, and T-SQL with the modern cloud ecosystem: AWS (S3, Glue, DMS, Lambda, Redshift, CloudWatch), Databricks, Delta Lake, Apache Airflow, and dbt. Having delivered production pipelines at Wissen Digital and Endava Solutions, I am experienced in orchestrating incremental processing, leading system cutovers, and resolving mission-critical data discrepancies."
+  ],
+  "biographyTitle": "Professional Background",
+  "summaryTitle": "Key Professional Summary",
+  "industries": "FinTech & Retail Analytics",
+  "primaryCloud": "Amazon Web Services (AWS)",
+  "capabilityTitle": "Core Engineering Capabilities",
+  "capabilitySubtitle": "Battle-tested architectural competencies across the modern data lifecycle",
+  "highlights": [
+    "Medallion Architecture & ACID Delta Tables",
+    "Zero-Data-Loss CDC Ingestion (AWS DMS)",
+    "Star Schema Modeling & Analytical Data Marts",
+    "Automated Financial Reconciliation & Audit Checks"
+  ],
+  "capabilities": [
+    {
+      "title": "Pipeline Architecture",
+      "description": "End-to-end batch and streaming ETL/ELT workflows with schema enforcement, idempotent runs, and automated CloudWatch alerting.",
+      "tags": [
+        "ETL/ELT",
+        "PySpark",
+        "AWS Glue",
+        "Airflow"
+      ]
+    },
+    {
+      "title": "Medallion Lakehouse Design",
+      "description": "Multi-hop storage architecture (Bronze raw ingestion, Silver cleansed/normalized, Gold business dimensions & facts) powered by Delta Lake ACID tables.",
+      "tags": [
+        "Bronze/Silver/Gold",
+        "Delta Lake",
+        "Databricks",
+        "S3"
+      ]
+    },
+    {
+      "title": "Incremental Processing",
+      "description": "High-performance incremental upserts and data merging utilizing Delta Lake MERGE INTO syntax and Slowly Changing Dimensions (SCD Type 1 & 2).",
+      "tags": [
+        "SCD 1 & 2",
+        "Delta MERGE",
+        "Upserts",
+        "Deduplication"
+      ]
+    },
+    {
+      "title": "Change Data Capture (CDC)",
+      "description": "Near real-time relational database replication leveraging AWS DMS binary logs, serverless S3 triggers with AWS Lambda, and AWS Glue curation.",
+      "tags": [
+        "AWS DMS",
+        "RDS MySQL",
+        "AWS Lambda",
+        "CDC"
+      ]
+    },
+    {
+      "title": "Data Quality & Reconciliation",
+      "description": "Automated audit frameworks validating schema drift, row count parity, null anomalies, and financial transaction reconciliations.",
+      "tags": [
+        "Data Integrity",
+        "Reconciliation",
+        "Validation Rules",
+        "SSIS"
+      ]
+    },
+    {
+      "title": "Cloud Analytics & Modeling",
+      "description": "Dimensional star schema modeling, Fact and Dimension tables, and query execution plan optimization on Amazon Redshift and Microsoft SQL Server.",
+      "tags": [
+        "Star Schema",
+        "Amazon Redshift",
+        "SQL Server",
+        "T-SQL"
+      ]
+    }
+  ],
+  "roleLabel": "Role",
+  "locationLabel": "Location",
+  "experienceLabel": "Experience",
+  "industriesLabel": "Industries",
+  "primaryCloudLabel": "Primary Cloud",
+  "emailLabel": "Email"
+}

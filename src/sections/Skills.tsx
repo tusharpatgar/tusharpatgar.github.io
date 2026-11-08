@@ -1,9 +1,9 @@
 import React from "react";
 import { motion } from "motion/react";
-import siteContent from "../content/site.json";
+import skillsContent from "../content/skills.json";
 
 export const Skills: React.FC = () => {
-  const { skills } = siteContent;
+  const skills = skillsContent;
   return (
     <section id="skills" className="relative py-20 md:py-28 border-t border-slate-900 bg-slate-950/60">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">

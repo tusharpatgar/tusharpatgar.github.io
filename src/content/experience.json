@@ -1,0 +1,54 @@
+{
+  "eyebrow": "Professional Experience",
+  "title": "Proven Industry Impact",
+  "description": "1.4 years engineering reliable data pipelines across enterprise FinTech and data consultancy domains.",
+  "entries": [
+    {
+      "company": "Wissen Digital Pvt Ltd",
+      "role": "Software Engineer",
+      "period": "July 2026 – November 2026",
+      "location": "Bengaluru, India",
+      "domain": "FinTech Data Engineering & Cloud Solutions",
+      "responsibilities": [
+        "Engineered high-throughput Python and SQL data pipelines for enterprise financial record processing and reconciliations.",
+        "Architected and deployed serverless cloud data solutions leveraging Amazon S3, AWS Lambda, AWS Glue, Amazon EC2, and Amazon Redshift.",
+        "Implemented comprehensive business transformation logic with automated validation rules, schema enforcement, and bad-record handling.",
+        "Supported production incremental processing workflows, configured CloudWatch telemetry and error alarming, and resolved ETL pipeline bottlenecks."
+      ],
+      "technologies": [
+        "Python",
+        "SQL",
+        "AWS S3",
+        "AWS Lambda",
+        "AWS Glue",
+        "Amazon Redshift",
+        "Amazon EC2",
+        "Amazon CloudWatch"
+      ]
+    },
+    {
+      "company": "Endava Solutions Pvt Ltd",
+      "role": "Data Engineer / ETL Programmer",
+      "period": "January 2025 – January 2026",
+      "location": "Bengaluru, India",
+      "domain": "Enterprise Financial Datasets & Data Integration",
+      "responsibilities": [
+        "Designed, developed, and optimized SSIS-based ETL pipelines handling high-volume financial transactions and accounting ledgers.",
+        "Constructed end-to-end data extraction, transformation, cleansing, and business-rule validation workflows in T-SQL.",
+        "Developed robust reconciliation frameworks to identify and isolate null anomalies, schema drift, and transaction imbalances across staging and destination systems.",
+        "Executed critical data verification and extraction processes during enterprise data migrations, merger integrations, and production system cutovers.",
+        "Partnered cross-functionally with QA leads, data analysts, and client stakeholders to uphold strict SLAs and ensure audit compliance."
+      ],
+      "technologies": [
+        "SSIS",
+        "SQL Server",
+        "T-SQL",
+        "Data Modelling",
+        "Data Quality Validation",
+        "Reconciliation",
+        "SSMS"
+      ]
+    }
+  ],
+  "technologiesLabel": "Technologies Used"
+}
