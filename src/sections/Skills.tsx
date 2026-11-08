@@ -43,11 +43,7 @@ export const Skills: React.FC = () => {
                 {category.skills.map((skill) => (
                   <div
                     key={skill.name}
-                    className={`flex items-center justify-between p-2.5 rounded-xl border transition-all duration-200 ${
-                      skill.highlighted
-                        ? "bg-sky-500/10 border-sky-500/30 text-sky-200"
-                        : "bg-slate-950/60 border-slate-800/80 text-slate-300 hover:border-slate-700 hover:text-slate-100"
-                    }`}
+                    className="flex items-center justify-between p-2.5 rounded-xl border transition-all duration-200 bg-sky-500/10 border-sky-500/30 text-sky-200 hover:bg-sky-500/15 hover:border-sky-400/50"
                   >
                     <span className="text-xs font-medium truncate">{skill.name}</span>
                     {skill.level && (
