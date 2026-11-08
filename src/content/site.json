@@ -601,5 +601,14 @@
     "copyrightPrefix": "©",
     "builtWith": "Built with React, Vite, Tailwind CSS & Motion.",
     "deploymentStatus": "GitHub Pages Continuous Deployment"
+  },
+  "projects": {
+    "eyebrow": "Featured Projects",
+    "title": "Production Data Solutions",
+    "description": "Three real-world implementations demonstrating modern lakehouse architecture, distributed PySpark processing, and automated AWS CDC ingestion.",
+    "repositoryLabel": "Repository",
+    "flowLabel": "Flow:",
+    "highlightsLabel": "Key Implementation Highlights:",
+    "viewSourceLabel": "View Source"
   }
 }

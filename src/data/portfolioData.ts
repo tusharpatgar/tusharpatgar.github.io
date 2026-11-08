@@ -10,6 +10,8 @@ export interface Project {
   technologies: string[];
   repoUrl?: string;
   liveUrl?: string;
+  image?: string;
+  imageAlt?: string;
   metrics?: { label: string; value: string }[];
 }
 

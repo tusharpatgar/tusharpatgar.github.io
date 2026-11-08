@@ -246,6 +246,17 @@ collections:
               - { label: "Built With Text", name: "builtWith", widget: "string" }
               - { label: "Deployment Status", name: "deploymentStatus", widget: "string" }
 
+          - label: "Projects Section Heading"
+            name: "projects"
+            widget: "object"
+            fields:
+              - { label: "Eyebrow", name: "eyebrow", widget: "string" }
+              - { label: "Heading", name: "title", widget: "string" }
+              - { label: "Description", name: "description", widget: "text" }
+              - { label: "Repository Button Label", name: "repositoryLabel", widget: "string" }
+              - { label: "Flow Label", name: "flowLabel", widget: "string" }
+              - { label: "Highlights Label", name: "highlightsLabel", widget: "string" }
+              - { label: "View Source Label", name: "viewSourceLabel", widget: "string" }
   - name: "projects"
     label: "Projects"
     files:
