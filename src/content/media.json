@@ -1,12 +1,12 @@
 {
+  "socialPreviewImage": "/og-preview.png",
+  "architectureImageAlt": "",
   "heroImage": "",
   "heroImageAlt": "",
-  "aboutImage": "",
-  "aboutImageAlt": "",
   "architectureImage": "",
-  "architectureImageAlt": "",
+  "resume": "/resume/Tushar_Patgar_Data_Engineer_Resume.pdf",
+  "aboutImage": "",
   "logoImage": "",
-  "favicon": "/favicon.svg",
-  "socialPreviewImage": "/og-preview.png",
-  "resume": "/resume/Tushar_Patgar_Data_Engineer_Resume.pdf"
+  "favicon": "/uploads/luffy-s_straw-hat-crew-s-jolly-roger.jpg",
+  "aboutImageAlt": ""
 }
