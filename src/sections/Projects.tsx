@@ -53,7 +53,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
             aria-label={`View GitHub repository for ${project.title}`}
           >
             <GitBranch className="w-3.5 h-3.5 text-sky-400" />
-            <span>Repository</span>
+            <span>{siteContent.projects.repositoryLabel}</span>
           </a>
         </div>
 
@@ -72,7 +72,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       <div className="relative z-10 px-6 sm:px-7 py-3 bg-slate-950/60 border-y border-slate-800/80 flex items-center gap-2">
         <Terminal className="w-3.5 h-3.5 text-sky-400 shrink-0" />
         <span className="text-[11px] font-mono text-slate-400 font-semibold uppercase tracking-wider shrink-0">
-          Flow:
+          {siteContent.projects.flowLabel}
         </span>
         <span className="text-[11px] font-mono text-slate-300 truncate">
           {project.architecture}
@@ -82,7 +82,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
       {/* Deliverables / Key Achievements */}
       <div className="relative z-10 p-6 sm:p-7 pt-4 space-y-2.5">
         <div className="text-[11px] font-semibold text-slate-400 uppercase tracking-wider mb-2">
-          Key Implementation Highlights:
+          {siteContent.projects.highlightsLabel}
         </div>
         {project.deliverables.map((item, idx) => (
           <div key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-300">
@@ -111,7 +111,7 @@ export const ProjectCard: React.FC<ProjectCardProps> = ({ project, index }) => {
           rel="noopener noreferrer"
           className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-xl text-xs font-semibold bg-sky-500/10 hover:bg-sky-500/20 text-sky-400 border border-sky-500/30 hover:border-sky-500/50 transition-all shrink-0"
         >
-          <span>View Source</span>
+          <span>{siteContent.projects.viewSourceLabel}</span>
           <ExternalLink className="w-3.5 h-3.5" />
         </a>
       </div>

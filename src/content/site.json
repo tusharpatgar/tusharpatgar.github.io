@@ -187,7 +187,13 @@
           "T-SQL"
         ]
       }
-    ]
+    ],
+    "roleLabel": "Role",
+    "locationLabel": "Location",
+    "experienceLabel": "Experience",
+    "industriesLabel": "Industries",
+    "primaryCloudLabel": "Primary Cloud",
+    "emailLabel": "Email"
   },
   "skills": {
     "eyebrow": "Technical Arsenal",
@@ -433,7 +439,8 @@
           "SSMS"
         ]
       }
-    ]
+    ],
+    "technologiesLabel": "Technologies Used"
   },
   "architecture": {
     "eyebrow": "Architecture Showcase",
@@ -531,7 +538,10 @@
         "latency": "< 2s Query SLA",
         "format": "Dimensional Star Schema"
       }
-    ]
+    ],
+    "stageLabel": "STAGE",
+    "latencyLabel": "Target Latency / SLA:",
+    "formatLabel": "Data Format:"
   },
   "credentials": {
     "eyebrow": "Credentials & Foundations",
@@ -595,7 +605,8 @@
     "copyButton": "Copy Email Address",
     "copiedButton": "Email Copied to Clipboard!",
     "resumeButton": "Download Resume (PDF)",
-    "subject": "Data Engineering Opportunity - Tushar Patgar"
+    "subject": "Data Engineering Opportunity - Tushar Patgar",
+    "timezoneSuffix": "(IST · UTC+5:30)"
   },
   "footer": {
     "copyrightPrefix": "©",

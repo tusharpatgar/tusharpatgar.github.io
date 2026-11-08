@@ -78,7 +78,7 @@ export const Contact: React.FC = () => {
                     <div>
                       <div className="text-xs text-slate-500">{contact.locationLabel}</div>
                       <div className="font-medium text-slate-200">
-                        {personal.location} <span className="text-xs text-slate-500">(IST · UTC+5:30)</span>
+                        {personal.location} <span className="text-xs text-slate-500">{contact.timezoneSuffix}</span>
                       </div>
                     </div>
                   </div>
@@ -134,7 +134,7 @@ export const Contact: React.FC = () => {
 
                 {/* Resume Download Action */}
                 <a
-                  href={personal.resumePdfUrl}
+                  href={media.resume || personal.resumePdfUrl}
                   download="Tushar_Patgar_Data_Engineer_Resume.pdf"
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/40 text-slate-300 hover:text-sky-300 font-medium text-sm transition-all"
                 >

@@ -144,6 +144,7 @@ collections:
               - { label: "Eyebrow", name: "eyebrow", widget: "string" }
               - { label: "Heading", name: "title", widget: "string" }
               - { label: "Description", name: "description", widget: "text" }
+              - { label: "Technologies Label", name: "technologiesLabel", widget: "string" }
               - label: "Experience Entries"
                 name: "entries"
                 widget: "list"
@@ -176,6 +177,9 @@ collections:
               - { label: "Audit Label", name: "auditLabel", widget: "string" }
               - { label: "Audit Value", name: "auditValue", widget: "string" }
               - { label: "Lineage Label", name: "lineageLabel", widget: "string" }
+              - { label: "Stage Label", name: "stageLabel", widget: "string" }
+              - { label: "Latency Label", name: "latencyLabel", widget: "string" }
+              - { label: "Format Label", name: "formatLabel", widget: "string" }
               - label: "Pipeline Stages"
                 name: "stages"
                 widget: "list"
@@ -238,6 +242,7 @@ collections:
               - { label: "Copied Button", name: "copiedButton", widget: "string" }
               - { label: "Resume Button", name: "resumeButton", widget: "string" }
               - { label: "Email Subject", name: "subject", widget: "string" }
+              - { label: "Timezone Suffix", name: "timezoneSuffix", widget: "string" }
           - label: "Footer"
             name: "footer"
             widget: "object"
