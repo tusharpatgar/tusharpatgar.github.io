@@ -60,7 +60,6 @@ export const About: React.FC = () => {
             </div>
           </motion.div>
 
-          {media.aboutImage && <img src={media.aboutImage} alt={media.aboutImageAlt || personal.name} className="w-full rounded-2xl object-cover border border-slate-800" />}
           {/* Quick Profile Summary Card */}
           <motion.div
             initial={{ opacity: 0, x: 20 }}
@@ -69,6 +68,7 @@ export const About: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="lg:col-span-5 space-y-4"
           >
+            {media.aboutImage && <img src={media.aboutImage} alt={media.aboutImageAlt || personal.name} className="w-full rounded-2xl object-cover border border-slate-800" />}
             <div className="p-6 rounded-2xl bg-gradient-to-br from-slate-900 via-slate-900/90 to-slate-950 border border-slate-800 shadow-xl space-y-4">
               <h4 className="text-base font-bold text-slate-100 tracking-wide uppercase text-xs text-sky-400">
                 {about.summaryTitle}
