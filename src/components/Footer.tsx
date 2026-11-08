@@ -1,9 +1,16 @@
 import React from "react";
 import { ArrowUp } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "./SocialIcons";
-import { PERSONAL_INFO } from "../data/portfolioData";
+import personalContent from "../content/personal.json";
+import mediaContent from "../content/media.json";
+import navigationContent from "../content/navigation.json";
+import footerContent from "../content/footer.json";
 
 export const Footer: React.FC = () => {
+  const personal = personalContent;
+  const navigation = navigationContent.links;
+  const footer = footerContent;
+  const media = mediaContent;
   const scrollToTop = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   };
@@ -14,48 +21,26 @@ export const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 pb-8 border-b border-slate-900">
           {/* Brand Identity */}
           <div className="flex items-center gap-3">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center font-black text-slate-950 text-base shadow-md shadow-sky-500/20">
-              TP
-            </div>
+            {media.logoImage ? <img src={media.logoImage} alt={personal.name} className="w-9 h-9 rounded-xl object-contain" /> : <div className="w-9 h-9 rounded-xl bg-gradient-to-tr from-sky-500 to-cyan-400 flex items-center justify-center font-black text-slate-950 text-base shadow-md shadow-sky-500/20">TP</div>}
             <div>
               <div className="font-bold text-slate-100 tracking-tight">
-                {PERSONAL_INFO.name}
+                {personal.name}
               </div>
               <div className="text-xs text-slate-400">
-                {PERSONAL_INFO.role} · {PERSONAL_INFO.location}
+                {personal.role} · {personal.location}
               </div>
             </div>
           </div>
 
           {/* Quick Nav Anchors */}
           <nav className="flex flex-wrap items-center justify-center gap-6 text-xs font-medium text-slate-400">
-            <a href="#about" className="hover:text-sky-400 transition-colors">
-              About
-            </a>
-            <a href="#skills" className="hover:text-sky-400 transition-colors">
-              Skills
-            </a>
-            <a href="#experience" className="hover:text-sky-400 transition-colors">
-              Experience
-            </a>
-            <a href="#projects" className="hover:text-sky-400 transition-colors">
-              Projects
-            </a>
-            <a href="#architecture" className="hover:text-sky-400 transition-colors">
-              Architecture
-            </a>
-            <a href="#certifications-education" className="hover:text-sky-400 transition-colors">
-              Credentials
-            </a>
-            <a href="#contact" className="hover:text-sky-400 transition-colors">
-              Contact
-            </a>
+            {navigation.map((link) => <a key={link.href} href={link.href} className="hover:text-sky-400 transition-colors">{link.label}</a>)}
           </nav>
 
           {/* Socials & Back to Top */}
           <div className="flex items-center gap-3">
             <a
-              href={PERSONAL_INFO.github}
+              href={personal.github}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="GitHub Profile"
@@ -64,7 +49,7 @@ export const Footer: React.FC = () => {
               <GithubIcon className="w-4 h-4" />
             </a>
             <a
-              href={PERSONAL_INFO.linkedin}
+              href={personal.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               aria-label="LinkedIn Profile"
@@ -85,11 +70,11 @@ export const Footer: React.FC = () => {
         {/* Bottom copyright notice */}
         <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <p>
-            © {new Date().getFullYear()} {PERSONAL_INFO.name}. Built with React, Vite, Tailwind CSS & Motion.
+            {footer.copyrightPrefix} {new Date().getFullYear()} {personal.name}. {footer.builtWith}
           </p>
           <div className="flex items-center gap-2">
             <span className="w-2 h-2 rounded-full bg-emerald-400" />
-            <span>GitHub Pages Continuous Deployment</span>
+            <span>{footer.deploymentStatus}</span>
           </div>
         </div>
       </div>

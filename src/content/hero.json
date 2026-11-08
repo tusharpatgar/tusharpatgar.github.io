@@ -1,0 +1,31 @@
+{
+  "availabilityLabel": "Open to Data Engineering Roles",
+  "name": "Tushar T Patgar",
+  "title": "Data Engineer | ETL Developer",
+  "tagline": "Engineering reliable data pipelines. Transforming complex data into analytics-ready intelligence.",
+  "description": "Specialized in building high-throughput ETL/ELT pipelines, Medallion lakehouses, and Change Data Capture (CDC) architectures across AWS, Databricks, and SQL Server for enterprise FinTech & analytics systems.",
+  "primaryCtaLabel": "Explore Projects",
+  "secondaryCtaLabel": "Download Resume",
+  "contactCtaLabel": "Get in Touch",
+  "terminalTitle": "delta_lake_merge.py",
+  "terminalStatus": "HEALTHY",
+  "terminalComment": "# Medallion Lakehouse Incremental Upsert",
+  "terminalCode": "from delta.tables import DeltaTable\n\nsilver_table = DeltaTable.forPath(spark, \"s3://lakehouse/silver/sales\")\n\nsilver_table.alias(\"target\") \\\n  .merge(bronze_df.alias(\"updates\"),\n         \"target.transaction_id = updates.transaction_id\") \\\n  .whenMatchedUpdateAll() \\\n  .whenNotMatchedInsertAll() \\\n  .execute()",
+  "terminalMetrics": [
+    {
+      "label": "Pipeline State",
+      "value": "ACID Committed"
+    },
+    {
+      "label": "Data Integrity",
+      "value": "Zero Null Anomalies"
+    },
+    {
+      "label": "Execution Engine",
+      "value": "PySpark on AWS Glue"
+    }
+  ],
+  "experienceCardTitle": "1.4 Years Experience",
+  "experienceCardSubtitle": "ETL, PySpark & AWS Cloud",
+  "statsLabel": "Connect:"
+}

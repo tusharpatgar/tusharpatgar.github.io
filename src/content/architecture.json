@@ -1,0 +1,101 @@
+{
+  "eyebrow": "Architecture Showcase",
+  "title": "End-to-End Enterprise Data Pipeline Flow",
+  "description": "Interactive pipeline topology demonstrating real-time ingestion, distributed transformation, Medallion storage, and analytical serving.",
+  "note": "Interactive conceptual architecture representing enterprise data engineering patterns.",
+  "inspectorLabel": "Inspecting",
+  "highlightLabel": "Engineering Highlight",
+  "technologiesLabel": "Stage Technologies & Tools:",
+  "specsTitle": "Operational Specifications",
+  "auditLabel": "Audit State",
+  "auditValue": "Schema-Validated & Tracked",
+  "lineageLabel": "Pipeline Lineage:",
+  "stages": [
+    {
+      "id": "source",
+      "number": "01",
+      "name": "Source Systems",
+      "category": "Ingress",
+      "technologies": [
+        "RDS MySQL",
+        "PostgreSQL",
+        "SQL Server",
+        "Transactional Logs",
+        "REST APIs"
+      ],
+      "description": "Operational relational databases and distributed feeds publishing change streams and financial ledger events.",
+      "highlight": "Binary log extraction & transactional durability",
+      "latency": "< 500ms",
+      "format": "OLTP Records / Binlogs"
+    },
+    {
+      "id": "ingestion",
+      "number": "02",
+      "name": "Data Ingestion & CDC",
+      "category": "Capture",
+      "technologies": [
+        "AWS DMS",
+        "Apache Kafka",
+        "AWS Lambda",
+        "S3 Ingestion Bucket"
+      ],
+      "description": "Capturing transactional updates continuously without source lock contention. Triggering serverless ingestion events.",
+      "highlight": "Zero-data-loss Change Data Capture (CDC)",
+      "latency": "Near Real-Time",
+      "format": "Raw JSON / Parquet Landing"
+    },
+    {
+      "id": "processing",
+      "number": "03",
+      "name": "Data Processing & ETL",
+      "category": "Transformation",
+      "technologies": [
+        "Apache Spark",
+        "PySpark",
+        "AWS Glue",
+        "Databricks",
+        "Delta Lake"
+      ],
+      "description": "Distributed cleansing, strict schema enforcement, currency conversions, business rules, and SCD Type 1 & 2 deduplication.",
+      "highlight": "ACID transactions with Delta MERGE INTO",
+      "latency": "Scheduled / Event Batch",
+      "format": "Delta Lake Tables"
+    },
+    {
+      "id": "storage",
+      "number": "04",
+      "name": "Medallion Lakehouse",
+      "category": "Storage",
+      "technologies": [
+        "Amazon S3",
+        "Bronze Layer (Raw)",
+        "Silver Layer (Cleaned)",
+        "Gold Layer (Curated)"
+      ],
+      "description": "Scalable cloud object storage organized into Medallion tiers ensuring clear lineage, auditing, and high concurrency read performance.",
+      "highlight": "Immutable Bronze ➔ Curated Gold",
+      "latency": "99.999999999% Durability",
+      "format": "Optimized Snappy Parquet"
+    },
+    {
+      "id": "analytics",
+      "number": "05",
+      "name": "Analytics & Consumption",
+      "category": "Serving",
+      "technologies": [
+        "Amazon Redshift",
+        "Amazon Athena",
+        "Snowflake",
+        "BI Reporting",
+        "Ad-hoc SQL"
+      ],
+      "description": "Star schema marts and analytical views queried by financial analysts, executive dashboards, and ML modeling workflows.",
+      "highlight": "Sub-second analytical query response",
+      "latency": "< 2s Query SLA",
+      "format": "Dimensional Star Schema"
+    }
+  ],
+  "stageLabel": "STAGE",
+  "latencyLabel": "Target Latency / SLA:",
+  "formatLabel": "Data Format:"
+}

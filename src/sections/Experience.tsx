@@ -1,9 +1,10 @@
 import React from "react";
 import { motion } from "motion/react";
 import { CheckCircle2, Briefcase, Calendar, MapPin, Tag } from "lucide-react";
-import { EXPERIENCES } from "../data/portfolioData";
+import experienceContent from "../content/experience.json";
 
 export const ExperienceSection: React.FC = () => {
+  const experience = experienceContent;
   return (
     <section
       id="experience"
@@ -12,13 +13,13 @@ export const ExperienceSection: React.FC = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16 max-w-3xl mx-auto space-y-3">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-semibold text-emerald-400 uppercase tracking-wider">
-            Professional Experience
+            {experience.eyebrow}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-            Proven Industry Impact
+            {experience.title}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed max-w-xl mx-auto">
-            1.4 years engineering reliable data pipelines across enterprise FinTech and data consultancy domains.
+            {experience.description}
           </p>
         </div>
 
@@ -28,7 +29,7 @@ export const ExperienceSection: React.FC = () => {
           <div className="absolute left-4 md:left-1/2 top-4 bottom-4 w-0.5 -translate-x-1/2 bg-gradient-to-b from-sky-500 via-indigo-500 to-emerald-500/30" />
 
           <div className="space-y-12">
-            {EXPERIENCES.map((event, index) => {
+            {experience.entries.map((event, index) => {
               const isEven = index % 2 === 0;
 
               return (
@@ -92,7 +93,7 @@ export const ExperienceSection: React.FC = () => {
                       <div className="mt-5 pt-4 border-t border-slate-800/80">
                         <div className="text-[10px] font-semibold text-slate-500 uppercase tracking-wider mb-2 flex items-center gap-1">
                           <Tag className="w-3 h-3" />
-                          Technologies Used
+                          {experience.technologiesLabel}
                         </div>
                         <div className="flex flex-wrap gap-1.5">
                           {event.technologies.map((tech) => (

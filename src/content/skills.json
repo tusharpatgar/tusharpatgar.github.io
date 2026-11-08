@@ -1,0 +1,234 @@
+{
+  "eyebrow": "Technical Arsenal",
+  "title": "Specialized Data Engineering Stack",
+  "description": "Comprehensive proficiency across distributed systems, cloud data platforms, dimensional modeling, and orchestration.",
+  "methodologyTitle": "Methodologies & Architectural Patterns",
+  "methodologyText": "Delta Lake ACID Upserts · Medallion Bronze-Silver-Gold · CDC via DMS · SCD Type 1 & 2 · Star Schema Data Marts",
+  "methodologyCta": "Explore Interactive Pipeline Flow",
+  "categories": [
+    {
+      "category": "Programming & Languages",
+      "description": "Core languages for pipeline logic, transformations, and analytical queries",
+      "skills": [
+        {
+          "name": "Python",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "SQL",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "T-SQL",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "PySpark",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Spark SQL",
+          "highlighted": true,
+          "level": ""
+        }
+      ]
+    },
+    {
+      "category": "Big Data & Lakehouse",
+      "description": "Distributed compute engines and ACID table formats for massive scale",
+      "skills": [
+        {
+          "name": "Apache Spark",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "PySpark",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Databricks",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Delta Lake",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Apache Kafka",
+          "level": ""
+        },
+        {
+          "name": "Apache Parquet",
+          "level": ""
+        }
+      ]
+    },
+    {
+      "category": "AWS Cloud Platform",
+      "description": "Enterprise cloud services for ingestion, compute, storage, and orchestration",
+      "skills": [
+        {
+          "name": "Amazon S3",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "AWS Glue",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "AWS Lambda",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Amazon Redshift",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "AWS DMS",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Amazon Athena",
+          "level": ""
+        },
+        {
+          "name": "AWS Step Functions",
+          "level": ""
+        },
+        {
+          "name": "Amazon CloudWatch",
+          "level": ""
+        },
+        {
+          "name": "AWS IAM",
+          "level": ""
+        },
+        {
+          "name": "AWS CLI",
+          "level": ""
+        },
+        {
+          "name": "Amazon EC2",
+          "level": ""
+        }
+      ]
+    },
+    {
+      "category": "Databases & Warehouses",
+      "description": "Relational engines, enterprise RDBMS, and cloud analytical warehouses",
+      "skills": [
+        {
+          "name": "Microsoft SQL Server",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "PostgreSQL",
+          "level": ""
+        },
+        {
+          "name": "MySQL",
+          "level": ""
+        },
+        {
+          "name": "Snowflake",
+          "level": ""
+        },
+        {
+          "name": "SSMS",
+          "level": ""
+        }
+      ]
+    },
+    {
+      "category": "Orchestration & DevOps",
+      "description": "Workflow scheduling, transformation management, containerization, and CI/CD",
+      "skills": [
+        {
+          "name": "Apache Airflow",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "dbt (Data Build Tool)",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "SSIS",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Docker",
+          "level": ""
+        },
+        {
+          "name": "Git",
+          "level": ""
+        },
+        {
+          "name": "GitHub Actions",
+          "level": ""
+        },
+        {
+          "name": "Linux / Bash",
+          "level": ""
+        }
+      ]
+    },
+    {
+      "category": "Data Engineering Core",
+      "description": "Architectural patterns, schema strategies, and data quality frameworks",
+      "skills": [
+        {
+          "name": "ETL / ELT Pipelines",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Medallion Architecture",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "CDC Replication",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "SCD Type 1 & 2",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Star Schema Modeling",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Data Quality & Reconciliation",
+          "highlighted": true,
+          "level": ""
+        },
+        {
+          "name": "Schema Drift Detection",
+          "level": ""
+        }
+      ]
+    }
+  ]
+}

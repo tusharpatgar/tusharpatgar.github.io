@@ -4,17 +4,19 @@ import {
   FileDown,
   ArrowRight,
   Database,
-  Layers,
-  Cpu,
-  ShieldCheck,
   Mail,
   MapPin,
   Terminal,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/SocialIcons";
-import { PERSONAL_INFO } from "../data/portfolioData";
+import heroContent from "../content/hero.json";
+import personalContent from "../content/personal.json";
+import mediaContent from "../content/media.json";
 
 export const Hero: React.FC = () => {
+  const hero = heroContent;
+  const personal = personalContent;
+  const media = mediaContent;
   return (
     <section className="relative min-h-screen pt-28 pb-16 md:pt-36 md:pb-24 flex items-center justify-center overflow-hidden">
       {/* Background ambient glow & grid effect */}
@@ -39,31 +41,31 @@ export const Hero: React.FC = () => {
                 <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
                 <span className="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
               </span>
-              <span>Open to Data Engineering Roles</span>
+              <span>{hero.availabilityLabel}</span>
               <span className="text-slate-600">|</span>
               <span className="text-slate-400 flex items-center gap-1">
                 <MapPin className="w-3 h-3 text-sky-400" />
-                Bengaluru, India
+                {personal.location}
               </span>
             </div>
 
             {/* Name & Title */}
             <div className="space-y-2">
               <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-slate-100 tracking-tight leading-[1.1]">
-                Tushar T Patgar
+                {hero.name}
               </h1>
               <div className="text-xl sm:text-2xl lg:text-3xl font-semibold bg-gradient-to-r from-sky-400 via-cyan-300 to-indigo-400 bg-clip-text text-transparent">
-                Data Engineer | ETL Developer
+                {hero.title}
               </div>
             </div>
 
             {/* Tagline & Statement */}
             <p className="text-lg sm:text-xl text-slate-300 font-medium leading-relaxed max-w-2xl">
-              "Engineering reliable data pipelines. Transforming complex data into analytics-ready intelligence."
+              {hero.tagline}
             </p>
 
             <p className="text-sm sm:text-base text-slate-400 leading-relaxed max-w-xl">
-              Specialized in building high-throughput ETL/ELT pipelines, Medallion lakehouses, and Change Data Capture (CDC) architectures across AWS, Databricks, and SQL Server for enterprise FinTech & analytics systems.
+              {hero.description}
             </p>
 
             {/* CTAs */}
@@ -72,34 +74,34 @@ export const Hero: React.FC = () => {
                 href="#projects"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-950 bg-gradient-to-r from-sky-400 to-cyan-300 hover:from-sky-300 hover:to-cyan-200 shadow-lg shadow-sky-500/25 transition-all transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-sky-400"
               >
-                <span>Explore Projects</span>
+                <span>{hero.primaryCtaLabel}</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
-                href={PERSONAL_INFO.resumePdfUrl}
+                href={(media.resume || personal.resumePdfUrl)}
                 download="Tushar_Patgar_Data_Engineer_Resume.pdf"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 rounded-xl font-semibold text-sm text-slate-200 bg-slate-900/90 hover:bg-slate-800 border border-slate-700/80 hover:border-sky-500/50 shadow-md transition-all transform hover:-translate-y-0.5 active:translate-y-0 focus:outline-none focus:ring-2 focus:ring-slate-400"
               >
                 <FileDown className="w-4 h-4 text-sky-400" />
-                <span>Download Resume</span>
+                <span>{hero.secondaryCtaLabel}</span>
               </a>
 
               <a
                 href="#contact"
                 className="inline-flex items-center gap-2 px-5 py-3 rounded-xl font-medium text-sm text-slate-300 hover:text-white hover:bg-slate-800/40 transition-colors"
               >
-                <span>Get in Touch</span>
+                <span>{hero.contactCtaLabel}</span>
               </a>
             </div>
 
             {/* Verified Social links */}
             <div className="flex items-center gap-4 pt-2 text-slate-400">
-              <span className="text-xs uppercase font-medium tracking-wider text-slate-500">Connect:</span>
+              <span className="text-xs uppercase font-medium tracking-wider text-slate-500">{hero.statsLabel}</span>
               <a
-                href={PERSONAL_INFO.github}
+                href={personal.github}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-900/70 hover:bg-slate-800 rounded-lg border border-slate-800 hover:text-slate-100 transition-colors"
@@ -108,7 +110,7 @@ export const Hero: React.FC = () => {
                 <GithubIcon className="w-4 h-4" />
               </a>
               <a
-                href={PERSONAL_INFO.linkedin}
+                href={personal.linkedin}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="p-2 bg-slate-900/70 hover:bg-slate-800 rounded-lg border border-slate-800 hover:text-sky-400 transition-colors"
@@ -117,7 +119,7 @@ export const Hero: React.FC = () => {
                 <LinkedinIcon className="w-4 h-4" />
               </a>
               <a
-                href={`mailto:${PERSONAL_INFO.email}`}
+                href={`mailto:${personal.email}`}
                 className="p-2 bg-slate-900/70 hover:bg-slate-800 rounded-lg border border-slate-800 hover:text-rose-400 transition-colors"
                 aria-label="Email Tushar Patgar"
               >
@@ -133,6 +135,7 @@ export const Hero: React.FC = () => {
             transition={{ duration: 0.8, delay: 0.15, ease: [0.16, 1, 0.3, 1] }}
             className="lg:col-span-5 relative space-y-4"
           >
+            {media.heroImage && <img src={media.heroImage} alt={media.heroImageAlt || hero.name} className="w-full max-h-64 object-cover rounded-2xl border border-slate-800" />}
             {/* Terminal Window Mockup */}
             <div className="relative rounded-2xl bg-slate-950/90 border border-slate-800 shadow-2xl shadow-sky-950/50 overflow-hidden backdrop-blur-xl">
               {/* Window Header */}
@@ -144,50 +147,19 @@ export const Hero: React.FC = () => {
                 </div>
                 <div className="flex items-center gap-1.5 text-xs font-mono text-slate-400">
                   <Terminal className="w-3.5 h-3.5 text-sky-400" />
-                  <span>delta_lake_merge.py</span>
+                  <span>{hero.terminalTitle}</span>
                 </div>
                 <div className="text-[10px] font-mono px-2 py-0.5 rounded bg-emerald-500/10 text-emerald-400 border border-emerald-500/20">
-                  HEALTHY
+                  {hero.terminalStatus}
                 </div>
               </div>
 
               {/* Terminal Code / Pipeline Stream Content */}
               <div className="p-5 font-mono text-xs text-slate-300 space-y-3 leading-relaxed overflow-x-auto">
-                <div className="text-slate-500"># Medallion Lakehouse Incremental Upsert</div>
-                <div>
-                  <span className="text-purple-400">from</span> <span className="text-sky-300">delta.tables</span> <span className="text-purple-400">import</span> DeltaTable
-                </div>
-                <div>
-                  <span className="text-slate-400">silver_table</span> = DeltaTable.<span className="text-amber-300">forPath</span>(spark, <span className="text-emerald-300">"s3://lakehouse/silver/sales"</span>)
-                </div>
-                <div className="pt-1">
-                  silver_table.<span className="text-amber-300">alias</span>(<span className="text-emerald-300">"target"</span>) \
-                  <br />&nbsp;&nbsp;.<span className="text-amber-300">merge</span>(bronze_df.<span className="text-amber-300">alias</span>(<span className="text-emerald-300">"updates"</span>),
-                  <br />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span className="text-emerald-300">"target.transaction_id = updates.transaction_id"</span>) \
-                  <br />&nbsp;&nbsp;.<span className="text-amber-300">whenMatchedUpdateAll</span>() \
-                  <br />&nbsp;&nbsp;.<span className="text-amber-300">whenNotMatchedInsertAll</span>() \
-                  <br />&nbsp;&nbsp;.<span className="text-amber-300">execute</span>()
-                </div>
-
+                <div className="text-slate-500">{hero.terminalComment}</div>
+                <pre className="whitespace-pre-wrap font-mono text-xs text-slate-300">{hero.terminalCode}</pre>
                 <div className="pt-2 border-t border-slate-800/80 space-y-1.5 text-[11px]">
-                  <div className="flex items-center justify-between text-slate-400">
-                    <span className="flex items-center gap-1.5 text-sky-400">
-                      <Layers className="w-3.5 h-3.5" /> Pipeline State:
-                    </span>
-                    <span className="text-slate-200">ACID Committed</span>
-                  </div>
-                  <div className="flex items-center justify-between text-slate-400">
-                    <span className="flex items-center gap-1.5 text-emerald-400">
-                      <ShieldCheck className="w-3.5 h-3.5" /> Data Integrity:
-                    </span>
-                    <span className="text-emerald-400">Zero Null Anomalies</span>
-                  </div>
-                  <div className="flex items-center justify-between text-slate-400">
-                    <span className="flex items-center gap-1.5 text-purple-400">
-                      <Cpu className="w-3.5 h-3.5" /> Execution Engine:
-                    </span>
-                    <span className="text-slate-200">PySpark on AWS Glue</span>
-                  </div>
+                  {hero.terminalMetrics.map((metric) => <div key={metric.label} className="flex items-center justify-between text-slate-400"><span>{metric.label}</span><span className="text-slate-200">{metric.value}</span></div>)}
                 </div>
               </div>
             </div>
@@ -202,8 +174,8 @@ export const Hero: React.FC = () => {
                 <Database className="w-5 h-5" />
               </div>
               <div>
-                <div className="text-xs font-semibold text-slate-200">1.4 Years Experience</div>
-                <div className="text-[11px] text-slate-400">ETL, PySpark & AWS Cloud</div>
+                <div className="text-xs font-semibold text-slate-200">{hero.experienceCardTitle}</div>
+                <div className="text-[11px] text-slate-400">{hero.experienceCardSubtitle}</div>
               </div>
             </motion.div>
           </motion.div>
@@ -216,7 +188,7 @@ export const Hero: React.FC = () => {
           transition={{ duration: 0.6, delay: 0.3 }}
           className="mt-16 pt-8 border-t border-slate-800/80 grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6"
         >
-          {PERSONAL_INFO.stats.map((stat) => (
+          {personal.stats.map((stat) => (
             <div
               key={stat.label}
               className="p-4 rounded-xl bg-slate-900/40 border border-slate-800/80 hover:border-slate-700/90 transition-colors"

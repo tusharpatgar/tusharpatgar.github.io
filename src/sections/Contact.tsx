@@ -9,14 +9,19 @@ import {
   FileDown,
 } from "lucide-react";
 import { GithubIcon, LinkedinIcon } from "../components/SocialIcons";
-import { PERSONAL_INFO } from "../data/portfolioData";
+import personalContent from "../content/personal.json";
+import contactContent from "../content/contact.json";
+import mediaContent from "../content/media.json";
 
 export const Contact: React.FC = () => {
+  const personal = personalContent;
+  const contact = contactContent;
+  const media = mediaContent;
   const [copied, setCopied] = useState(false);
 
   const handleCopyEmail = async () => {
     try {
-      await navigator.clipboard.writeText(PERSONAL_INFO.email);
+      await navigator.clipboard.writeText(personal.email);
       setCopied(true);
       setTimeout(() => setCopied(false), 2500);
     } catch {
@@ -36,13 +41,13 @@ export const Contact: React.FC = () => {
           {/* Section Header */}
           <div className="text-center space-y-3 mb-14">
             <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-sky-500/10 border border-sky-500/20 text-xs font-semibold text-sky-400 uppercase tracking-wider">
-              Get In Touch
+              {contact.eyebrow}
             </div>
             <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-slate-100 tracking-tight">
-              Let's Engineer Reliable Data Solutions
+              {contact.title}
             </h2>
             <p className="text-slate-400 text-base sm:text-lg max-w-xl mx-auto leading-relaxed">
-              Open to Data Engineer, ETL Developer, and Analytics Engineering roles. Feel free to reach out directly.
+              {contact.description}
             </p>
           </div>
 
@@ -59,13 +64,13 @@ export const Contact: React.FC = () => {
               <div className="space-y-6">
                 <div>
                   <span className="text-xs font-mono font-semibold text-sky-400 uppercase tracking-wider">
-                    Direct Contact
+                    {contact.directContactLabel}
                   </span>
                   <h3 className="text-2xl font-bold text-slate-100 mt-1">
-                    {PERSONAL_INFO.name}
+                    {personal.name}
                   </h3>
                   <p className="text-sm text-slate-400 mt-0.5">
-                    {PERSONAL_INFO.role}
+                    {personal.role}
                   </p>
                 </div>
 
@@ -75,9 +80,9 @@ export const Contact: React.FC = () => {
                       <MapPin className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-500">Location</div>
+                      <div className="text-xs text-slate-500">{contact.locationLabel}</div>
                       <div className="font-medium text-slate-200">
-                        {PERSONAL_INFO.location} <span className="text-xs text-slate-500">(IST · UTC+5:30)</span>
+                        {personal.location} <span className="text-xs text-slate-500">{contact.timezoneSuffix}</span>
                       </div>
                     </div>
                   </div>
@@ -87,9 +92,9 @@ export const Contact: React.FC = () => {
                       <Mail className="w-4 h-4" />
                     </div>
                     <div>
-                      <div className="text-xs text-slate-500">Email Address</div>
+                      <div className="text-xs text-slate-500">{contact.emailLabel}</div>
                       <div className="font-mono text-xs sm:text-sm text-slate-200 font-medium">
-                        {PERSONAL_INFO.email}
+                        {personal.email}
                       </div>
                     </div>
                   </div>
@@ -98,7 +103,7 @@ export const Contact: React.FC = () => {
                 {/* Status indicator */}
                 <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-xs font-medium text-emerald-400">
                   <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
-                  Available for new opportunities
+                  {contact.availabilityLabel}
                 </div>
               </div>
 
@@ -106,11 +111,11 @@ export const Contact: React.FC = () => {
               <div className="space-y-4 md:border-l md:border-slate-800/80 md:pl-8">
                 {/* Send Email Action */}
                 <a
-                  href={`mailto:${PERSONAL_INFO.email}?subject=Data%20Engineering%20Opportunity%20-%20Tushar%20Patgar`}
+                  href={`mailto:${personal.email}?subject=${encodeURIComponent(contact.subject)}`}
                   className="w-full flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl bg-gradient-to-r from-sky-400 to-cyan-400 hover:from-sky-300 hover:to-cyan-300 text-slate-950 font-bold text-sm shadow-lg shadow-sky-500/20 transition-all hover:scale-[1.02] active:scale-[0.98]"
                 >
                   <Mail className="w-4 h-4" />
-                  <span>Send an Email</span>
+                  <span>{contact.emailButton}</span>
                 </a>
 
                 {/* Copy Email Button */}
@@ -121,30 +126,30 @@ export const Contact: React.FC = () => {
                   {copied ? (
                     <>
                       <Check className="w-4 h-4 text-emerald-400" />
-                      <span className="text-emerald-400 font-semibold">Email Copied to Clipboard!</span>
+                      <span className="text-emerald-400 font-semibold">{contact.copiedButton}</span>
                     </>
                   ) : (
                     <>
                       <Copy className="w-4 h-4 text-slate-400" />
-                      <span>Copy Email Address</span>
+                      <span>{contact.copyButton}</span>
                     </>
                   )}
                 </button>
 
                 {/* Resume Download Action */}
                 <a
-                  href={PERSONAL_INFO.resumePdfUrl}
+                  href={media.resume || personal.resumePdfUrl}
                   download="Tushar_Patgar_Data_Engineer_Resume.pdf"
                   className="w-full flex items-center justify-center gap-2 px-6 py-3 rounded-2xl bg-slate-900 border border-slate-800 hover:border-sky-500/40 text-slate-300 hover:text-sky-300 font-medium text-sm transition-all"
                 >
                   <FileDown className="w-4 h-4 text-sky-400" />
-                  <span>Download Resume (PDF)</span>
+                  <span>{contact.resumeButton}</span>
                 </a>
 
                 {/* Social Profiles Grid */}
                 <div className="pt-2 grid grid-cols-2 gap-2.5">
                   <a
-                    href={PERSONAL_INFO.linkedin}
+                    href={personal.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-sky-500/40 text-xs font-semibold text-slate-300 hover:text-sky-400 transition-colors"
@@ -155,7 +160,7 @@ export const Contact: React.FC = () => {
                   </a>
 
                   <a
-                    href={PERSONAL_INFO.github}
+                    href={personal.github}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="flex items-center justify-center gap-2 p-2.5 rounded-xl bg-slate-950/60 border border-slate-800/80 hover:border-sky-500/40 text-xs font-semibold text-slate-300 hover:text-sky-400 transition-colors"

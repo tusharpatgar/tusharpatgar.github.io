@@ -1,0 +1,33 @@
+name: Validate CMS Portfolio Build
+
+on:
+  push:
+    branches: [cms-full-portfolio]
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/**"
+      - "public/admin/**"
+      - "package.json"
+      - "package-lock.json"
+      - "tsconfig*.json"
+      - "vite.config.ts"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Build portfolio
+        run: npm run build
