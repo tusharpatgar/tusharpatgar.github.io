@@ -116,11 +116,11 @@ collections:
           - { label: "Capabilities Heading", name: "capabilityTitle", widget: "string" }
           - { label: "Capabilities Subtitle", name: "capabilitySubtitle", widget: "text" }
             - { label: "Role Label", name: "roleLabel", widget: "string", required: false }
-            - { label: "Location Label", name: "locationLabel", widget: "string", required: false }
-            - { label: "Experience Label", name: "experienceLabel", widget: "string", required: false }
-            - { label: "Industries Label", name: "industriesLabel", widget: "string", required: false }
-            - { label: "Primary Cloud Label", name: "primaryCloudLabel", widget: "string", required: false }
-            - { label: "Email Label", name: "emailLabel", widget: "string", required: false }
+          - { label: "Location Label", name: "locationLabel", widget: "string", required: false }
+          - { label: "Experience Label", name: "experienceLabel", widget: "string", required: false }
+          - { label: "Industries Label", name: "industriesLabel", widget: "string", required: false }
+          - { label: "Primary Cloud Label", name: "primaryCloudLabel", widget: "string", required: false }
+          - { label: "Email Label", name: "emailLabel", widget: "string", required: false }
           - label: "About Highlights"
             name: "highlights"
             widget: "list"
