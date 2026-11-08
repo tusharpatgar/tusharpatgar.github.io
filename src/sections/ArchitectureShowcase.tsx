@@ -12,11 +12,12 @@ import {
   Sparkles,
   Info,
 } from "lucide-react";
-import { PIPELINE_STAGES } from "../data/portfolioData";
+import siteContent from "../content/site.json";
 
 export const ArchitectureShowcase: React.FC = () => {
+  const { architecture, media } = siteContent;
   const [selectedStageIndex, setSelectedStageIndex] = useState(2); // Default to Processing stage
-  const selectedStage = PIPELINE_STAGES[selectedStageIndex];
+  const selectedStage = architecture.stages[selectedStageIndex];
 
   const stageIcons = [
     Database,   // Sources
@@ -35,28 +36,29 @@ export const ArchitectureShowcase: React.FC = () => {
         {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-3 mb-16">
           <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-cyan-500/10 border border-cyan-500/20 text-xs font-semibold text-cyan-400 uppercase tracking-wider">
-            Architecture Showcase
+            {architecture.eyebrow}
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-100 tracking-tight">
-            End-to-End Enterprise Data Pipeline Flow
+            {architecture.title}
           </h2>
           <p className="text-slate-400 text-base sm:text-lg leading-relaxed">
-            Interactive pipeline topology demonstrating real-time ingestion, distributed transformation, Medallion storage, and analytical serving.
+            {architecture.description}
           </p>
 
           <div className="inline-flex items-center gap-1.5 text-xs text-slate-400 bg-slate-900/60 px-3 py-1 rounded-md border border-slate-800">
             <Info className="w-3.5 h-3.5 text-sky-400 shrink-0" />
-            <span>Interactive conceptual architecture representing enterprise data engineering patterns.</span>
+            <span>{architecture.note}</span>
           </div>
         </div>
 
+        {media.architectureImage && <img src={media.architectureImage} alt={media.architectureImageAlt || architecture.title} className="w-full max-h-96 object-contain rounded-2xl border border-slate-800 mb-10" />}
         {/* Pipeline Stage Navigation Cards */}
         <div className="relative mb-12">
           {/* Connecting glowing line behind cards on desktop */}
           <div className="hidden lg:block absolute top-1/2 left-10 right-10 -translate-y-1/2 h-[2px] bg-gradient-to-r from-sky-500/30 via-indigo-500/40 to-purple-500/30 -z-0" />
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 relative z-10">
-            {PIPELINE_STAGES.map((stage, idx) => {
+            {architecture.stages.map((stage, idx) => {
               const Icon = stageIcons[idx];
               const isSelected = selectedStageIndex === idx;
 
@@ -76,7 +78,7 @@ export const ArchitectureShowcase: React.FC = () => {
                       layoutId="activeStageIndicator"
                       className="absolute -top-1.5 left-1/2 -translate-x-1/2 px-2.5 py-0.5 rounded-full bg-sky-400 text-[10px] font-extrabold text-slate-950 uppercase tracking-widest shadow-md"
                     >
-                      Inspecting
+                      {architecture.inspectorLabel}
                     </motion.div>
                   )}
 
@@ -143,7 +145,7 @@ export const ArchitectureShowcase: React.FC = () => {
                   <Sparkles className="w-5 h-5 text-sky-400 shrink-0 mt-0.5" />
                   <div>
                     <div className="text-xs font-semibold uppercase tracking-wider text-sky-400">
-                      Engineering Highlight
+                      {architecture.highlightLabel}
                     </div>
                     <div className="text-sm font-medium text-slate-200 mt-0.5">
                       {selectedStage.highlight}
@@ -154,7 +156,7 @@ export const ArchitectureShowcase: React.FC = () => {
                 {/* Technologies in this Stage */}
                 <div>
                   <div className="text-xs font-semibold text-slate-400 uppercase tracking-wider mb-2.5">
-                    Stage Technologies & Tools:
+                    {architecture.technologiesLabel}
                   </div>
                   <div className="flex flex-wrap gap-2">
                     {selectedStage.technologies.map((tech) => (
@@ -173,7 +175,7 @@ export const ArchitectureShowcase: React.FC = () => {
               <div className="lg:col-span-5 space-y-4">
                 <div className="p-6 rounded-2xl bg-slate-950/90 border border-slate-800/80 space-y-4">
                   <h4 className="text-xs font-bold text-slate-400 uppercase tracking-wider">
-                    Operational Specifications
+                    {architecture.specsTitle}
                   </h4>
 
                   <div className="space-y-3.5 divide-y divide-slate-800/80 text-sm">
@@ -200,17 +202,17 @@ export const ArchitectureShowcase: React.FC = () => {
                     <div className="flex items-center justify-between pt-3">
                       <span className="text-slate-400 flex items-center gap-2">
                         <CheckCircle2 className="w-4 h-4 text-cyan-400" />
-                        Audit State:
+                        {architecture.auditLabel}:
                       </span>
                       <span className="text-slate-200 text-xs font-medium">
-                        Schema-Validated & Tracked
+                        {architecture.auditValue}
                       </span>
                     </div>
                   </div>
 
                   <div className="pt-2">
                     <div className="text-[11px] text-slate-500 font-mono">
-                      Pipeline Lineage: {PIPELINE_STAGES.map((s) => s.name).join(" ➔ ")}
+                      {architecture.lineageLabel} {architecture.stages.map((s) => s.name).join(" ➔ ")}
                     </div>
                   </div>
                 </div>
