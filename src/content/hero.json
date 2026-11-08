@@ -1,16 +1,7 @@
 {
-  "availabilityLabel": "Open to Data Engineering Roles",
-  "name": "Tushar T Patgar",
-  "title": "Data Engineer | ETL Developer",
-  "tagline": "Engineering reliable data pipelines. Transforming complex data into analytics-ready intelligence.",
-  "description": "Specialized in building high-throughput ETL/ELT pipelines, Medallion lakehouses, and Change Data Capture (CDC) architectures across AWS, Databricks, and SQL Server for enterprise FinTech & analytics systems.",
-  "primaryCtaLabel": "Explore Projects",
-  "secondaryCtaLabel": "Download Resume",
-  "contactCtaLabel": "Get in Touch",
-  "terminalTitle": "delta_lake_merge.py",
-  "terminalStatus": "HEALTHY",
   "terminalComment": "# Medallion Lakehouse Incremental Upsert",
-  "terminalCode": "from delta.tables import DeltaTable\n\nsilver_table = DeltaTable.forPath(spark, \"s3://lakehouse/silver/sales\")\n\nsilver_table.alias(\"target\") \\\n  .merge(bronze_df.alias(\"updates\"),\n         \"target.transaction_id = updates.transaction_id\") \\\n  .whenMatchedUpdateAll() \\\n  .whenNotMatchedInsertAll() \\\n  .execute()",
+  "contactCtaLabel": "Get in Touch",
+  "primaryCtaLabel": "Explore Projects",
   "terminalMetrics": [
     {
       "label": "Pipeline State",
@@ -25,7 +16,16 @@
       "value": "PySpark on AWS Glue"
     }
   ],
-  "experienceCardTitle": "1.4 Years Experience",
+  "terminalCode": "from delta.tables import DeltaTable\n\nsilver_table = DeltaTable.forPath(spark, \"s3://lakehouse/silver/sales\")\n\nsilver_table.alias(\"target\") \\\n  .merge(bronze_df.alias(\"updates\"),\n         \"target.transaction_id = updates.transaction_id\") \\\n  .whenMatchedUpdateAll() \\\n  .whenNotMatchedInsertAll() \\\n  .execute()",
+  "name": "Tushar Patgar",
+  "terminalStatus": "HEALTHY",
+  "tagline": "Engineering reliable data pipelines. Transforming complex data into analytics-ready intelligence.",
   "experienceCardSubtitle": "ETL, PySpark & AWS Cloud",
-  "statsLabel": "Connect:"
+  "statsLabel": "Connect:",
+  "secondaryCtaLabel": "Download Resume",
+  "title": "Data Engineer | ETL Developer",
+  "availabilityLabel": "Open to Data Engineering Roles",
+  "terminalTitle": "delta_lake_merge.py",
+  "description": "Specialized in building high-throughput ETL/ELT pipelines, Medallion lakehouses, and Change Data Capture (CDC) architectures across AWS, Databricks, and SQL Server for enterprise FinTech & analytics systems.",
+  "experienceCardTitle": "1.4 Years Experience"
 }
