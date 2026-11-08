@@ -7,7 +7,9 @@ import {
   Terminal,
 } from "lucide-react";
 import type { Project } from "../data/portfolioData";
-import { PROJECTS } from "../data/portfolioData";
+import portfolioContent from "../content/portfolio.json";
+
+const PROJECTS = portfolioContent.projects as Project[];
 
 interface ProjectCardProps {
   project: Project;
